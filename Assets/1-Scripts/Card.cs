@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using DG.Tweening;
 public class Card : MonoBehaviour
 {
 
@@ -17,10 +17,20 @@ public class Card : MonoBehaviour
     /// >   
 
 
+    private void Update()
+    {
+    }
+
+
 
     public void OnHover()
     {
+        transform.DOScale(Vector3.one*1.2f, 0.2f);
+    }
 
+    public void OnEndHover()
+    {
+        transform.DOScale(Vector3.one, 0.2f);
     }
 
 
