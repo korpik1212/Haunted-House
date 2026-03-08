@@ -1,0 +1,13 @@
+The Parent Classes should give guidelines to the Scriptable objects and allow for generic Logic.
+
+Event - Parent
+    * Scare card{}
+    * Environment Element
+    * Possible Reaction<Key is Enum, Value is Callable>
+    * Duration
+    * Start time
+    * Scare Type Values<Key is Enum, Value is int>
+
+Environment Element
+    * Events<>
+    * functionality to check time availability and other shit()
