@@ -5,6 +5,34 @@ public class CardHolder : MonoBehaviour
 {
     public List<Card> cards = new List<Card>();
 
+    public static CardHolder instance;
+
+
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+
+
+    public void RemoveCardFromHand(Card card)
+    {
+
+        if (cards.Contains(card))
+        {
+            cards.Remove(card);
+        }
+        Destroy(card.gameObject);
+    }
 
 
     private void Update()

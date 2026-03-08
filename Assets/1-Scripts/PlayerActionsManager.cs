@@ -130,6 +130,8 @@ public class PlayerActionsManager : MonoBehaviour
         ICardTargetable targetable = clickedObject.GetComponentInParent<ICardTargetable>();
         if (targetable != null && currentlySelectedCard != null)
         {
+            CardHolder.instance.RemoveCardFromHand(currentlySelectedCard);
+            currentlySelectedCard = null;
             targetable.OnTargetClick(currentlySelectedCard);
         }
     }
