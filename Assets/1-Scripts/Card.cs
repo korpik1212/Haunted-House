@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
-public class Card : MonoBehaviour
+using UnityEngine.EventSystems;
+public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
 
 
@@ -17,20 +18,11 @@ public class Card : MonoBehaviour
     /// >   
 
 
-    private void Update()
+
+    public Vector3 startingSize;
+    private void Awake()
     {
-    }
-
-
-
-    public void OnHover()
-    {
-        transform.DOScale(Vector3.one*1.2f, 0.2f);
-    }
-
-    public void OnEndHover()
-    {
-        transform.DOScale(Vector3.one, 0.2f);
+        startingSize = transform.localScale;
     }
 
 
@@ -39,5 +31,16 @@ public class Card : MonoBehaviour
 
     }
 
+  
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        transform.DOScale(startingSize * 1.2f, 0.2f);
 
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        transform.DOScale(startingSize, 0.2f);
+
+    }
 }
