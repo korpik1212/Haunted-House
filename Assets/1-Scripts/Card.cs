@@ -3,10 +3,13 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
 
 
+
+    public ScareCard CardType;
 
     /// <summary   
     ///  1. when players hover over this this should get bigger 
@@ -28,11 +31,26 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
     public GameObject[] circles;
 
+
+    public Image icon;
+
     private void Awake()
     {
         startingSize = transform.localScale;
     }
 
+
+    private void Start()
+    {
+        SetupCardData(CardFactory.instance.GetCardData(this));
+        
+
+    }
+
+    public void SetupCardData(CardScriptableObject cardData)
+    {
+        icon.sprite = cardData.sprite;
+    }
 
     private void Update()
     {
