@@ -1,6 +1,8 @@
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
 
@@ -20,27 +22,82 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
 
     public Vector3 startingSize;
+    public bool isHovering;
+    public bool isSelected;
+
+
+    public GameObject[] circles;
+
     private void Awake()
     {
         startingSize = transform.localScale;
     }
 
 
+    private void Update()
+    {
+        if (isHovering)
+        {
+
+            if (InputSystem.actions["Click"].WasPressedThisFrame())
+            {
+                OnSelected();
+            }
+        }
+
+        if (isSelected)
+        {
+            DrawCardTrajectory();
+        }
+    }
+    public void DrawCardTrajectory()
+    {
+        Vector2 startPos = transform.position;
+        Vector2 mousePos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+
+        Vector2 controlPoint = startPos + (mousePos - startPos) / 2f;
+        controlPoint.y += 200f;
+
+        for (int i = 0; i < circles.Length; i++)
+        {
+            float t = i / (float)(circles.Length - 1);
+
+            Vector2 position = Mathf.Pow(1 - t, 2) * startPos +
+                               2 * (1 - t) * t * controlPoint +
+                               Mathf.Pow(t, 2) * mousePos;
+
+            circles[i].transform.position = position;
+
+            if (!circles[i].activeSelf)
+            {
+                circles[i].SetActive(true);
+            }
+        }
+    }
+
     public void OnSelected()
     {
+        isSelected = true;
 
+    }
+
+    public void OnDeselected()
+    {
+        isSelected = false;
     }
 
   
     public void OnPointerEnter(PointerEventData eventData)
     {
         transform.DOScale(startingSize * 1.2f, 0.2f);
+        isHovering = true;
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         transform.DOScale(startingSize, 0.2f);
+        isHovering = false;
 
     }
 }
