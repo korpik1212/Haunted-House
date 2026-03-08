@@ -3,15 +3,30 @@ using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using System;
 
-public class PlayerRaycastManager : MonoBehaviour
+public class PlayerActionsManager : MonoBehaviour
 {
     [SerializeField] private LayerMask hitLayer = ~0;
 
     private Camera mainCamera;
     private IHoverable currentHoverable;
 
+    public Card currentlySelectedCard;
+
+
+    public static PlayerActionsManager instance;
+
+
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         mainCamera = Camera.main;
     }
 
@@ -33,6 +48,11 @@ public class PlayerRaycastManager : MonoBehaviour
         {
             ProcessClick(objectUnderMouse, worldPosition);
         }
+    }
+
+    public void SelectCard(Card card)
+    {
+        currentlySelectedCard = card;
     }
 
     private GameObject GetTopMostObject(Vector2 worldPosition)
@@ -106,7 +126,12 @@ public class PlayerRaycastManager : MonoBehaviour
 
     private void ProcessClick(GameObject clickedObject, Vector2 worldPosition)
     {
-       
+       Debug.Log("Clicked on: " + clickedObject.name);
+        ICardTargetable targetable = clickedObject.GetComponentInParent<ICardTargetable>();
+        if (targetable != null && currentlySelectedCard != null)
+        {
+            targetable.OnTargetClick(currentlySelectedCard);
+        }
     }
 
    

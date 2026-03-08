@@ -78,6 +78,7 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public void OnSelected()
     {
         isSelected = true;
+        PlayerActionsManager.instance.SelectCard(this);
 
     }
 

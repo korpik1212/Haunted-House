@@ -1,19 +1,30 @@
 using UnityEngine;
 
-public class Room : MonoBehaviour, ICardTargetable
+public class Room : MonoBehaviour, ICardTargetable,IHoverable
 {
 
 
 
-    public void OnClick(Card card)
+    public void OnTargetClick(Card card)
+    {
+        Debug.Log("got target clicked");
+    }
+
+    public void OnTargetHoverEnter(Card card)
+    {
+
+    }
+
+    public void OnHoverEnter()
+    {
+        Debug.Log("hoverinn");
+    }
+
+    public void OnTargetHoverExit(Card card)
     {
     }
 
-    public void OnHoverEnter(Card card)
-    {
-    }
-
-    public void OnHoverExit(Card card)
+    public void OnHoverExit()
     {
     }
 }

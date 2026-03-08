@@ -5,10 +5,10 @@ public interface ICardTargetable
 
 
 
-    public void OnHoverEnter(Card card);
-    public void OnHoverExit(Card card);
+    public void OnTargetHoverEnter(Card card);
+    public void OnTargetHoverExit(Card card);
 
-    public void OnClick(Card card);
+    public void OnTargetClick(Card card);
 
 
 
