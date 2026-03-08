@@ -16,4 +16,18 @@ public class Card : MonoBehaviour
     /// different targetables and target systems (always target rooms, so only rooms have targetable 
     /// >   
 
+
+
+    public void OnHover()
+    {
+
+    }
+
+
+    public void OnSelected()
+    {
+
+    }
+
+
 }
