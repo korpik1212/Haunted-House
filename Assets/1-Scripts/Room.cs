@@ -1,40 +1,33 @@
+using System;
 using UnityEngine;
+using System.Collections;
 
-public class Room : MonoBehaviour, ICardTargetable,IHoverable
+public class Room : MonoBehaviour
 {
 
-    public EnvironmentElement environmentElement;
+    public ArrayList EnvironmentElements = new ArrayList();
 
 
 
-    public void AssignEnviormentElement(EnvironmentElement environmentElement)
+    private void gatherRoomElements()
     {
-
+        int childCount = transform.childCount;
+        for (int i = 0; i < childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            EnvironmentElement environmentElement = child.GetComponent<EnvironmentElement>();
+            if (environmentElement != null)
+            {
+                EnvironmentElements.Add(environmentElement);
+            }
+        }
     }
 
 
-
-    public void OnTargetClick(Card card)
+    private void Start()
     {
-        Debug.Log("got target clicked");
-        TimeAndEventHandler.instance.AssignEvent(card.CardType, environmentElement);
+        gatherRoomElements();
     }
 
-    public void OnTargetHoverEnter(Card card)
-    {
-
-    }
-
-    public void OnHoverEnter()
-    {
-        Debug.Log("hoverinn");
-    }
-
-    public void OnTargetHoverExit(Card card)
-    {
-    }
-
-    public void OnHoverExit()
-    {
-    }
+    
 }
