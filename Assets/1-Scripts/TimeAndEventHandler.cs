@@ -6,7 +6,8 @@ public class TimeAndEventHandler : MonoBehaviour
 {
 
     public static TimeAndEventHandler instance;
-    
+    public DateTime currentTime;
+    public TimeSpan increment = TimeSpan.FromHours(1);
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -17,6 +18,19 @@ public class TimeAndEventHandler : MonoBehaviour
         {
             instance = this;
         }
+
+        currentTime = new DateTime(2026, 1, 1, 0, 0, 0);
+    }
+
+    public void Update()
+    {
+        //currentTime += increment*Time.deltaTime;
+    }
+
+    public void advanceTime()
+    {
+        currentTime += increment;
+        
     }
     
     [ContextMenu("Trigger All Events")]

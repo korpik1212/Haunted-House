@@ -5,7 +5,7 @@ using System.Collections;
 
 public class House : MonoBehaviour
 {
-    
+    public List<Card> avaibleCards;
     public List<Room> rooms;
     public List<Human> humans;
     

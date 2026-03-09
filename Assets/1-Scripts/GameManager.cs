@@ -1,22 +1,43 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
   
     public UnityEvent OnHouseCleared;
-
-
     public House startingHousePrefab;
-    private void Start()
+
+
+    public static GameManager instance;
+
+    public CardHolder cardHolder;
+
+    public bool IsPlayerInputAllowed;
+
+    private void Awake()
     {
-        SetupHouse();
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
 
+    private void Start()
+    {
+        StartCoroutine(GameLoop());
+    }
+
+
+    House createdHouse = null;
     public void SetupHouse()
     {
 
-        House h = Instantiate(startingHousePrefab, Vector3.zero, Quaternion.identity);
+        createdHouse = Instantiate(startingHousePrefab, Vector3.zero, Quaternion.identity);
         //generate a house 
         //generate rooms
         //generate furniture for the room
@@ -29,6 +50,31 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+    public void SetupCards()
+    {
+        foreach(Card cardPrefab in createdHouse.avaibleCards)
+        {
+           Card card= Instantiate(cardPrefab, Vector3.zero, Quaternion.identity,cardHolder.transform);
+            cardHolder.cards.Add(card);
+        }
+    }
+
+    public IEnumerator GameLoop()
+    {
+
+        SetupHouse();
+        yield return new WaitForSeconds(1);
+
+        SetupCards();
+
+        yield return new WaitForSeconds(5);
+
+        IsPlayerInputAllowed = true;
+
+
+        yield return new WaitForSeconds(30);
+        IsPlayerInputAllowed = false;
     }
 
     public void HouseCleared()
