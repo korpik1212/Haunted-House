@@ -16,7 +16,7 @@ public enum ScareType
     DISGUST,
     PARANOIA
 }
-public abstract class Event
+public abstract class Event : MonoBehaviour
 {
 
     private DateTime startTime;
