@@ -57,7 +57,8 @@ public class CardHolder : MonoBehaviour
 
             Vector3 targetPos = new Vector3(xPos, yPos, 0f);
             Quaternion targetRot = Quaternion.Euler(0f, 0f, zRot);
-            Vector3 targetScale = Vector3.one;
+            //move to start to get the starting size from there 
+            Vector3 targetScale = new Vector3(1.1625f, 1.75f, 1f);
 
             bool isHovered = cards[i].isHovering;
 
@@ -65,7 +66,7 @@ public class CardHolder : MonoBehaviour
             {
                 targetPos.y += 50f;
                 targetRot = Quaternion.identity;
-                targetScale = Vector3.one * 1.2f;
+                targetScale = targetScale * 1.2f;
                 cards[i].transform.SetAsLastSibling();
             }
             else

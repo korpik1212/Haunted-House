@@ -17,4 +17,7 @@ public class EnvironmentElement
         //check if the event's duration conflicts with any event in the "Events" List
         return available;
     }
+
+
+
 }

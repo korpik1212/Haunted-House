@@ -108,14 +108,14 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
   
     public void OnPointerEnter(PointerEventData eventData)
     {
-        transform.DOScale(startingSize * 1.2f, 0.2f);
+       // transform.DOScale(startingSize * 1.2f, 0.2f);
         isHovering = true;
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        transform.DOScale(startingSize, 0.2f);
+       // transform.DOScale(startingSize, 0.2f);
         isHovering = false;
 
     }
