@@ -11,7 +11,17 @@ public class EnvironmentElement
 
     List<EventParent> Events;
 
-    public bool checkTimeSlotAvailability(EventParent eventToAssign)
+    public bool addEvent(EventParent spookEvent)
+    {
+        if (checkTimeSlotAvailability(spookEvent))
+        {
+            Events.Add(spookEvent);
+            return true;
+        }
+        return false;
+    }
+    
+    private bool checkTimeSlotAvailability(EventParent eventToAssign)
     {
         bool available = false;
         //check if the event's duration conflicts with any event in the "Events" List

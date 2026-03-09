@@ -17,7 +17,7 @@ public class Room : MonoBehaviour, ICardTargetable,IHoverable
     public void OnTargetClick(Card card)
     {
         Debug.Log("got target clicked");
-        TimeAndEventHandler.instance.GenerateEvent(card.CardType, environmentElement);
+        TimeAndEventHandler.instance.AssignEvent(card.CardType, environmentElement);
     }
 
     public void OnTargetHoverEnter(Card card)

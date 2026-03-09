@@ -16,19 +16,40 @@ public enum ScareType
     DISGUST,
     PARANOIA
 }
-public interface EventParent 
+public abstract class EventParent 
 {
-    // Event - Interface
-    // * Scare card{}
-    // * Environment Element
-    // * Duration time
-    // * Start time
-    // * Scare Type Values() returning a map<Key is Enum, Value is Integer>
-    
-    public abstract DateTime getStartTime();
-    public abstract TimeSpan getDuration();
-    public abstract EnvironmentElement getHost();
-    public abstract ScareCard getCard();
+
+    private DateTime startTime;
+    private TimeSpan duration;
+    private EnvironmentElement hostObject;
+    private ScareCard scareCard;
+    public EventParent(DateTime sT, TimeSpan d, EnvironmentElement h, ScareCard c)
+    {
+        startTime = sT;
+        duration = d;
+        hostObject = h;
+        scareCard = c;
+    }
+
+    public DateTime getStartTime()
+    {
+        return startTime;
+    }
+
+    public TimeSpan getDuration()
+    {
+        return duration;
+    }
+
+    public EnvironmentElement getHost()
+    {
+        return hostObject;
+    }
+
+    public ScareCard getCard()
+    {
+        return scareCard;
+    }
     public abstract Dictionary<ScareType, int> spook();
 
 }
