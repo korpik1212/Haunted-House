@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13192774137db14cd8d1773188e6f43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::House
+  avaibleCards:
+  - {fileID: 6465857651386013951, guid: a2d39093275b18f428e908831efeb424, type: 3}
+  - {fileID: 6465857651386013951, guid: a2d39093275b18f428e908831efeb424, type: 3}
+  - {fileID: 6465857651386013951, guid: a2d39093275b18f428e908831efeb424, type: 3}
   rooms:
   - {fileID: 1970239243414101671}
   humans: []

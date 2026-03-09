@@ -54,6 +54,10 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
     private void Update()
     {
+        if(GameManager.instance.IsPlayerInputAllowed == false)
+        {
+            return;
+        }
         if (isHovering)
         {
 
@@ -108,14 +112,17 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
   
     public void OnPointerEnter(PointerEventData eventData)
     {
-       // transform.DOScale(startingSize * 1.2f, 0.2f);
+        // transform.DOScale(startingSize * 1.2f, 0.2f);
+        Debug.Log("pointer entered");
         isHovering = true;
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-       // transform.DOScale(startingSize, 0.2f);
+        Debug.Log("pointer exited");
+
+        // transform.DOScale(startingSize, 0.2f);
         isHovering = false;
 
     }
