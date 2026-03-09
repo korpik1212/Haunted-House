@@ -36,6 +36,14 @@ public class Human : MonoBehaviour
 
     public void DoSimulationStep()
     {
-        
+
+        foreach (Fear fear in fearLevelCaps.Keys)
+        {
+            if (currentFearLevels[fear] > fearLevelCaps[fear])
+            {
+                Debug.Log("I,  + name + , have reached my " + fear + " fear level cap and am now incapacitated");
+            }
+        }
+
     }
 }
