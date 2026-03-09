@@ -3,31 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum ScareCard
-{
-    POLTERGEIST,
-    ENVIORMENTALGHOST,
-    SPIDER
-}
 
-public enum ScareType
+public abstract class Event : ScriptableObject
 {
-    SHOCK,
-    DISGUST,
-    PARANOIA
-}
-public abstract class Event : MonoBehaviour
-{
-
     private DateTime startTime;
     private TimeSpan duration;
-    private EnvironmentElement hostObject;
-    private ScareCard scareCard;
-    public Event(EnvironmentElement h, ScareCard c)
-    {
-        hostObject = h;
-        scareCard = c;
-    }
 
     public void setStartTime(DateTime time)
     {
@@ -43,16 +23,4 @@ public abstract class Event : MonoBehaviour
     {
         return duration;
     }
-
-    public EnvironmentElement getHost()
-    {
-        return hostObject;
-    }
-
-    public ScareCard getCard()
-    {
-        return scareCard;
-    }
-    public abstract Dictionary<ScareType, int> spook();
-
 }

@@ -98,8 +98,6 @@ public class TimeAndEventHandler : MonoBehaviour
     }
 }
 
-
-
 public class TestEvent : Event
 {
     public TestEvent(EnvironmentElement h, ScareCard c) : base(h, c)

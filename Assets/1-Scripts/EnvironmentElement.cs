@@ -32,7 +32,7 @@ public class EnvironmentElement : MonoBehaviour
         }
     }
 
-    public void addEvent(Event e)
+    public void addEvent(ScareEvent e)
     {
         Debug.Log(e);
         e.spook();
