@@ -7,8 +7,6 @@ public class TimeAndEventHandler : MonoBehaviour
 
     public static TimeAndEventHandler instance;
     
-
-    
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -20,8 +18,7 @@ public class TimeAndEventHandler : MonoBehaviour
             instance = this;
         }
     }
-
-   
+    
     [ContextMenu("Trigger All Events")]
     public void TestTriggerCommand()
     {
@@ -30,23 +27,21 @@ public class TimeAndEventHandler : MonoBehaviour
 
     public void AssignEvent(ScareCard scareCard, EnvironmentElement host, DateTime startTime)
     {
-        if (getEvent(scareCard, host) != null)
+        if (getScareEvent(scareCard, host) != null)
         {
 
-            Event eventToAdd = getEvent(scareCard, host);
+            ScareEvent eventToAdd = getScareEvent(scareCard, host);
 
-
-            if (host.checkTimeSlotAvailability(startTime,eventToAdd.getDuration()))
+            if (host.checkTimeSlotAvailability())
             {
-                eventToAdd.setStartTime(startTime);
-                host.addEvent(eventToAdd);
+                host.setTrap(eventToAdd);
             }
         }
     }
 
-    private Event getEvent(ScareCard sc, EnvironmentElement h)
+    private ScareEvent getScareEvent(ScareCard sc, EnvironmentElement h)
     {
-        Event result = null;
+        ScareEvent result = null;
         switch (sc)
         {
             case ScareCard.ENVIORMENTALGHOST :
@@ -98,7 +93,7 @@ public class TimeAndEventHandler : MonoBehaviour
     }
 }
 
-public class TestEvent : Event
+public class TestEvent : ScareEvent
 {
     public TestEvent(EnvironmentElement h, ScareCard c) : base(h, c)
     {

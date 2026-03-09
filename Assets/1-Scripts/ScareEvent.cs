@@ -13,7 +13,7 @@ public enum ScareType
     DISGUST,
     PARANOIA
 }
-public abstract class ScareEvent : Event
+public abstract class ScareEvent : MonoBehaviour
 { private EnvironmentElement hostObject;
     private ScareCard scareCard;
     public ScareEvent(EnvironmentElement h, ScareCard c)

@@ -19,42 +19,26 @@ public class EnvironmentElement : MonoBehaviour
     // * Events<>
     // * functionality to check time availability and other shit()
 
-    private List<Event> events=new List<Event>();
+    private ScareEvent Trap = null;
 
     public EnvironmentElementType type;
     
 
     public void DoSimulationStep()
     {
-        foreach (Event Event in events)
-        {
-            //MAKE EVENT DO ITS THING
-        }
+        
     }
 
-    public void addEvent(ScareEvent e)
+    public void setTrap(ScareEvent e)
     {
-        Debug.Log(e);
-        e.spook();
-        events.Add(e);
+        Trap = e;
     }
     
-    public bool checkTimeSlotAvailability(Event eventToAssign)
+    public bool checkTimeSlotAvailability()
     {
-     return checkTimeSlotAvailability(eventToAssign.getStartTime(), eventToAssign.getDuration());
+     return Trap != null;
     }
-    public bool checkTimeSlotAvailability(DateTime startTime, TimeSpan duration)
-    {
-        bool available = true;
-        foreach (Event e in events)
-        {
-            if ((e.getStartTime()>= startTime && e.getStartTime() <= startTime + duration)||e.getStartTime()+e.getDuration() >= startTime)
-            {
-                available = false;
-            }
-        }
-        return available;
-    }
+    
     public void OnTargetClick(Card card)
     {
         Debug.Log("got target clicked");
