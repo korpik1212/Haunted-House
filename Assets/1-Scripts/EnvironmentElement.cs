@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class EnvironmentElement : MonoBehaviour, ICardTargetable,IHoverable
+public enum EnvironmentElementType
 {
     MIRROR,
     SINK,
@@ -15,28 +15,22 @@ public class EnvironmentElement
     // * Events<>
     // * functionality to check time availability and other shit()
 
-    private List<EventParent> _events;
+    private List<EventParent> events;
 
     public EnvironmentElementType type;
     public bool addEvent(EventParent spookEvent)
     {
         if (checkTimeSlotAvailability(spookEvent))
         {
-            Events.Add(spookEvent);
+            events.Add(spookEvent);
             return true;
         }
         return false;
     }
-    public bool checkTimeSlotAvailability(EventParent eventToAssign)
-    {
-        bool available = false;
-        //check if the event's duration conflicts with any event in the "Events" List
-        return available;
-    }
 
     public void DoSimulationStep()
     {
-        foreach (EventParent eventParent in _events)
+        foreach (EventParent eventParent in events)
         {
             //MAKE EVENT DO ITS THING
         }
@@ -52,7 +46,7 @@ public class EnvironmentElement
     public void OnTargetClick(Card card)
     {
         Debug.Log("got target clicked");
-        TimeAndEventHandler.instance.GenerateEvent(card.CardType, this);
+        TimeAndEventHandler.instance.AssignEvent(card.CardType, this);
     }
 
     public void OnTargetHoverEnter(Card card)
