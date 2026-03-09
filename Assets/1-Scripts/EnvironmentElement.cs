@@ -38,13 +38,7 @@ public class EnvironmentElement : MonoBehaviour
     {
      return Trap != null;
     }
-    
-    public void OnTargetClick(Card card)
-    {
-        Debug.Log("got target clicked");
-        //todo here the ui to determine the time should pop up and we should place the selected time into "startTime:DateTime.now"
-        TimeAndEventHandler.instance.AssignEvent(card.CardType, this,startTime:DateTime.Now);
-    }
+
 
     public void OnTargetHoverEnter(Card card)
     {
@@ -63,5 +57,13 @@ public class EnvironmentElement : MonoBehaviour
     public void OnHoverExit()
     {
     }
+
+    public void OnTargetClick(Card card)
+    {
+        Debug.Log(card.CardType.ToString());
+        Debug.Log(gameObject.name);
+        TimeAndEventHandler.instance.AssignEvent(card.CardType, this, startTime: DateTime.Now);
+    }
+}
 
 }
