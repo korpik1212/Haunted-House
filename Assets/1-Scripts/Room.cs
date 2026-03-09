@@ -6,6 +6,14 @@ public class Room : MonoBehaviour, ICardTargetable,IHoverable
     public EnvironmentElement environmentElement;
 
 
+
+    public void AssignEnviormentElement(EnvironmentElement environmentElement)
+    {
+
+    }
+
+
+
     public void OnTargetClick(Card card)
     {
         Debug.Log("got target clicked");

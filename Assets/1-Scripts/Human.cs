@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Human : MonoBehaviour
 {
+
+
+
+
     public void MoveToRoom(Room room)
     {
         //move anim 
