@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,15 +19,7 @@ public class EnvironmentElement
     private List<Event> events;
 
     public EnvironmentElementType type;
-    public bool addEvent(Event spookEvent)
-    {
-        if (checkTimeSlotAvailability(spookEvent))
-        {
-            events.Add(spookEvent);
-            return true;
-        }
-        return false;
-    }
+    
 
     public void DoSimulationStep()
     {
@@ -36,17 +29,28 @@ public class EnvironmentElement
         }
     }
 
-    private bool checkTimeSlotAvailability(Event eventToAssign)
+    public void addEvent(Event e)
+    {
+        events.Add(e);
+    }
+    
+    public bool checkTimeSlotAvailability(Event eventToAssign)
     {
         bool available = false;
         //check if the event's duration conflicts with any event in the "Events" List
         return available;
     }
-
+    public bool checkTimeSlotAvailability(DateTime startTime, TimeSpan duration)
+    {
+        bool available = false;
+        //check if the event's duration conflicts with any event in the "Events" List
+        return available;
+    }
     public void OnTargetClick(Card card)
     {
         Debug.Log("got target clicked");
-        TimeAndEventHandler.instance.AssignEvent(card.CardType, this);
+        //todo here the ui to determine the time should pop up and we should place the selected time into "startTime:DateTime.now"
+        TimeAndEventHandler.instance.AssignEvent(card.CardType, this,startTime:DateTime.Now);
     }
 
     public void OnTargetHoverEnter(Card card)

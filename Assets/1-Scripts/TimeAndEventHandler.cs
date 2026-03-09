@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,11 +28,16 @@ public class TimeAndEventHandler : MonoBehaviour
         
     }
 
-    public void AssignEvent(ScareCard scareCard, EnvironmentElement environmentElement)
+    public void AssignEvent(ScareCard scareCard, EnvironmentElement host, DateTime startTime)
     {
-        if (getEvent(scareCard, environmentElement) != null)
+        if (getEvent(scareCard, host) != null)
         {
-            environmentElement.addEvent(getEvent(scareCard, environmentElement));
+            Event eventToAdd = getEvent(scareCard, host);
+            if (host.checkTimeSlotAvailability(startTime,eventToAdd.getDuration()))
+            {
+                eventToAdd.setStartTime(startTime);
+                host.addEvent(eventToAdd);
+            }
         }
     }
 
