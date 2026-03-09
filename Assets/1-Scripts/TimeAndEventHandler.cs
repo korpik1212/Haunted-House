@@ -7,7 +7,7 @@ public class TimeAndEventHandler : MonoBehaviour
     public static TimeAndEventHandler instance;
     
 
-    private List<EventParent> eventDataBase;
+    
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -18,14 +18,9 @@ public class TimeAndEventHandler : MonoBehaviour
         {
             instance = this;
         }
-        populateDatabase();
     }
 
-    private void populateDatabase()
-    {
-        eventDataBase = new List<EventParent>();
-        //todo append singleton for each event
-    }
+   
     [ContextMenu("Trigger All Events")]
     public void TestTriggerCommand()
     {
@@ -34,22 +29,16 @@ public class TimeAndEventHandler : MonoBehaviour
 
     public void AssignEvent(ScareCard scareCard, EnvironmentElement environmentElement)
     {
-        if (doesEventExist(scareCard, environmentElement) != null)
+        if (getEvent(scareCard, environmentElement) != null)
         {
-            environmentElement.addEvent(doesEventExist(scareCard, environmentElement));
+            environmentElement.addEvent(getEvent(scareCard, environmentElement));
         }
     }
 
-    private EventParent doesEventExist(ScareCard sc, EnvironmentElement h)
+    private EventParent getEvent(ScareCard sc, EnvironmentElement h)
     {
         EventParent result = null;
-        foreach(EventParent e in eventDataBase)
-        {
-            if (e.getCard() == sc && e.getHost() == h)
-            {
-                result = e;
-            }
-        }
+        
         return result;
     }
 }
