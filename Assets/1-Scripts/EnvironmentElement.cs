@@ -41,14 +41,18 @@ public class EnvironmentElement
     
     public bool checkTimeSlotAvailability(Event eventToAssign)
     {
-        bool available = false;
-        //check if the event's duration conflicts with any event in the "Events" List
-        return available;
+     return checkTimeSlotAvailability(eventToAssign.getStartTime(), eventToAssign.getDuration());
     }
     public bool checkTimeSlotAvailability(DateTime startTime, TimeSpan duration)
     {
-        bool available = false;
-        //check if the event's duration conflicts with any event in the "Events" List
+        bool available = true;
+        foreach (Event e in events)
+        {
+            if ((e.getStartTime()>= startTime && e.getStartTime() <= startTime + duration)||e.getStartTime()+e.getDuration() >= startTime)
+            {
+                available = false;
+            }
+        }
         return available;
     }
     public void OnTargetClick(Card card)
