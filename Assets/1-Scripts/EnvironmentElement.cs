@@ -13,7 +13,7 @@ public enum EnvironmentElementType
 
 
 [System.Serializable]
-public class EnvironmentElement : MonoBehaviour
+public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
 {
     // Environment Element
     // * Events<>
