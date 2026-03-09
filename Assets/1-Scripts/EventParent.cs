@@ -23,14 +23,17 @@ public abstract class EventParent
     private TimeSpan duration;
     private EnvironmentElement hostObject;
     private ScareCard scareCard;
-    public EventParent(DateTime sT, TimeSpan d, EnvironmentElement h, ScareCard c)
+    public EventParent(EnvironmentElement h, ScareCard c)
     {
-        startTime = sT;
-        duration = d;
         hostObject = h;
         scareCard = c;
     }
 
+    public void setStartTime(DateTime time)
+    {
+        startTime = time;
+    }
+    
     public DateTime getStartTime()
     {
         return startTime;

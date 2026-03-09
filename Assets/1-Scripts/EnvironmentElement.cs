@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
+public enum EnvironmentElementType
+{
+    MIRROR,
+    SINK,
+    COUCH
+}
 public class EnvironmentElement
 {
     // Environment Element
@@ -10,7 +16,7 @@ public class EnvironmentElement
     // * functionality to check time availability and other shit()
 
     List<EventParent> Events;
-
+    public EnvironmentElementType type;
     public bool addEvent(EventParent spookEvent)
     {
         if (checkTimeSlotAvailability(spookEvent))

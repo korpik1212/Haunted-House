@@ -38,7 +38,51 @@ public class TimeAndEventHandler : MonoBehaviour
     private EventParent getEvent(ScareCard sc, EnvironmentElement h)
     {
         EventParent result = null;
-        
+        switch (sc)
+        {
+            case ScareCard.ENVIORMENTALGHOST :
+                switch (h.type)
+                {
+                    case EnvironmentElementType.COUCH:
+                        //todo result= new ENVIRONMENTALGHOST_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.MIRROR:
+                        //todo result= new ENVIRONMENTALGHOST_MIRROR_EVENT()
+                        break;
+                    case EnvironmentElementType.SINK:
+                        //todo result= new ENVIRONMENTALGHOST_SINK_EVENT()
+                        break;
+                }
+                break;
+            case ScareCard.POLTERGEIST :
+                switch (h.type)
+                {
+                    case EnvironmentElementType.COUCH:
+                        //todo result= new POLTERGEIST_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.MIRROR:
+                        //todo result= new POLTERGEIST_MIRROR_EVENT()
+                        break;
+                    case EnvironmentElementType.SINK:
+                        //todo result= new POLTERGEIST_SINK_EVENT()
+                        break;
+                }
+                break;
+            case ScareCard.SPIDER :
+                switch (h.type)
+                {
+                    case EnvironmentElementType.COUCH:
+                        //todo result= new SPIDER_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.MIRROR:
+                        //todo result= new SPIDER_MIRROR_EVENT()
+                        break;
+                    case EnvironmentElementType.SINK:
+                        //todo result= new SPIDER_SINK_EVENT()
+                        break;
+                }
+                break;
+        }
         return result;
     }
 }
