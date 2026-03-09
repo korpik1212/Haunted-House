@@ -26,7 +26,7 @@ public class Room : MonoBehaviour
 
     private void Start()
     {
-        gatherRoomElements();
+        //gatherRoomElements();
     }
 
     

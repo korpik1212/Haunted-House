@@ -32,7 +32,10 @@ public class TimeAndEventHandler : MonoBehaviour
     {
         if (getEvent(scareCard, host) != null)
         {
+
             Event eventToAdd = getEvent(scareCard, host);
+
+
             if (host.checkTimeSlotAvailability(startTime,eventToAdd.getDuration()))
             {
                 eventToAdd.setStartTime(startTime);
@@ -50,6 +53,8 @@ public class TimeAndEventHandler : MonoBehaviour
                 switch (h.type)
                 {
                     case EnvironmentElementType.COUCH:
+                        result = new TestEvent(h, sc);
+                        Debug.Log("assigned event");
                         //todo result= new ENVIRONMENTALGHOST_COUCH_EVENT()
                         break;
                     case EnvironmentElementType.MIRROR:
@@ -90,5 +95,22 @@ public class TimeAndEventHandler : MonoBehaviour
                 break;
         }
         return result;
+    }
+}
+
+
+
+public class TestEvent : Event
+{
+    public TestEvent(EnvironmentElement h, ScareCard c) : base(h, c)
+    {
+
+    }
+    public override Dictionary<ScareType, int> spook()
+    {
+
+        Debug.Log("helooo");
+
+        return null;
     }
 }

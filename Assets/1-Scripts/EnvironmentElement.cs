@@ -10,13 +10,16 @@ public enum EnvironmentElementType
     SINK,
     COUCH
 }
+
+
+[System.Serializable]
 public class EnvironmentElement
 {
     // Environment Element
     // * Events<>
     // * functionality to check time availability and other shit()
 
-    private List<Event> events;
+    private List<Event> events=new List<Event>();
 
     public EnvironmentElementType type;
     
@@ -31,6 +34,8 @@ public class EnvironmentElement
 
     public void addEvent(Event e)
     {
+        Debug.Log(e);
+        e.spook();
         events.Add(e);
     }
     
