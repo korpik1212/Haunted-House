@@ -2,19 +2,29 @@ using UnityEngine;
 
 public class TimeAndEventHandler : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public static TimeAndEventHandler instance;
+
+
+    private void Awake()
     {
-        
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    [ContextMenu("Trigger All Events")]
+    public void TestTriggerCommand()
     {
-        
+
     }
 
-    private void generateEvent(ScareCard scareCard, EnvironmentElement environmentElement)
+    public void GenerateEvent(ScareCard scareCard, EnvironmentElement environmentElement)
     {
         
     }

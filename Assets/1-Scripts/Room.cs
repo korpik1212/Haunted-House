@@ -3,11 +3,13 @@ using UnityEngine;
 public class Room : MonoBehaviour, ICardTargetable,IHoverable
 {
 
+    public EnvironmentElement environmentElement;
 
 
     public void OnTargetClick(Card card)
     {
         Debug.Log("got target clicked");
+        TimeAndEventHandler.instance.GenerateEvent(card.CardType, environmentElement);
     }
 
     public void OnTargetHoverEnter(Card card)
