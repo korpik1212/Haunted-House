@@ -15,10 +15,10 @@ public class EnvironmentElement
     // * Events<>
     // * functionality to check time availability and other shit()
 
-    private List<EventParent> events;
+    private List<Event> events;
 
     public EnvironmentElementType type;
-    public bool addEvent(EventParent spookEvent)
+    public bool addEvent(Event spookEvent)
     {
         if (checkTimeSlotAvailability(spookEvent))
         {
@@ -30,13 +30,13 @@ public class EnvironmentElement
 
     public void DoSimulationStep()
     {
-        foreach (EventParent eventParent in events)
+        foreach (Event Event in events)
         {
             //MAKE EVENT DO ITS THING
         }
     }
 
-    private bool checkTimeSlotAvailability(EventParent eventToAssign)
+    private bool checkTimeSlotAvailability(Event eventToAssign)
     {
         bool available = false;
         //check if the event's duration conflicts with any event in the "Events" List

@@ -35,9 +35,9 @@ public class TimeAndEventHandler : MonoBehaviour
         }
     }
 
-    private EventParent getEvent(ScareCard sc, EnvironmentElement h)
+    private Event getEvent(ScareCard sc, EnvironmentElement h)
     {
-        EventParent result = null;
+        Event result = null;
         switch (sc)
         {
             case ScareCard.ENVIORMENTALGHOST :

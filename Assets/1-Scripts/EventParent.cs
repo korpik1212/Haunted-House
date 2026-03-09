@@ -16,14 +16,14 @@ public enum ScareType
     DISGUST,
     PARANOIA
 }
-public abstract class EventParent 
+public abstract class Event
 {
 
     private DateTime startTime;
     private TimeSpan duration;
     private EnvironmentElement hostObject;
     private ScareCard scareCard;
-    public EventParent(EnvironmentElement h, ScareCard c)
+    public Event(EnvironmentElement h, ScareCard c)
     {
         hostObject = h;
         scareCard = c;
