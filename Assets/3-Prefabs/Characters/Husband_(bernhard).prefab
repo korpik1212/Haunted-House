@@ -197,50 +197,24 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -8653719598885068355, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       insertIndex: -1
-<<<<<<< HEAD
-      addedObject: {fileID: 7826199329192821320}
-=======
       addedObject: {fileID: 7573297166564122046}
->>>>>>> bf17c122fadd50a0f10f36dbe00786f1e3783dcb
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 717dacdf052048c40aa60618043b247a, type: 3}
 --- !u!1 &2289166402923922106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: 717dacdf052048c40aa60618043b247a, type: 3}
   m_PrefabInstance: {fileID: 1739250823878451975}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
---- !u!95 &7826199329192821320
-Animator:
-  serializedVersion: 7
-=======
 --- !u!114 &7573297166564122046
 MonoBehaviour:
->>>>>>> bf17c122fadd50a0f10f36dbe00786f1e3783dcb
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2289166402923922106}
   m_Enabled: 1
-<<<<<<< HEAD
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1c46b1322e68f25428986a29652a0e7c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
-=======
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f984f0683d87bd43b57d6ac2bc9b47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Human
   routine: []
   startingRoom: {fileID: 0}
->>>>>>> bf17c122fadd50a0f10f36dbe00786f1e3783dcb
