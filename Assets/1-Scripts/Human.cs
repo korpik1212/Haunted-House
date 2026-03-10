@@ -16,7 +16,7 @@ public class Human : MonoBehaviour
 
     public List<RoutineEvent> routine;
     
-    public Room currentRoom;
+    private Room currentRoom;
     public Room startingRoom;
     
     Dictionary<Fear, int> fearLevelCaps = new Dictionary<Fear, int>();
@@ -25,16 +25,9 @@ public class Human : MonoBehaviour
 
     public void Start()
     {
-        currentRoom = startingRoom;
+        moveToRoom(startingRoom);
     }
-
-    public void MoveToRoom(Room room)
-    {
-        //move anim 
-
-        //event trigger 
-        // if there is a card that triggers when human enters room it triggers now 
-    }
+    
 
     public void DoSimulationStep()
     {
@@ -53,9 +46,24 @@ public class Human : MonoBehaviour
             }
         }
     }
+    
 
-    private void doRoutine()
+    public void moveToRoom(Room room)
     {
-        
+        currentRoom = room;
+        transform.position = room.transform.position;
     }
+
+    public void checkTraps()
+    {
+            foreach (EnvironmentElement environmentElement in currentRoom.EnvironmentElements)
+            {
+                if (environmentElement.hasTrap())
+                {
+                    environmentElement.GetTrap().spook();
+                }
+            }
+    }
+
+    public Room getCurrentRoom() => currentRoom;
 }
