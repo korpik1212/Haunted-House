@@ -14,6 +14,8 @@ public enum Fear
 public class Human : MonoBehaviour
 {
 
+    public List<RoutineEvent> routine;
+    
     public Room currentRoom;
     public Room startingRoom;
     
@@ -36,7 +38,13 @@ public class Human : MonoBehaviour
 
     public void DoSimulationStep()
     {
+        
+        checkFears();
 
+    }
+
+    private void checkFears()
+    {
         foreach (Fear fear in fearLevelCaps.Keys)
         {
             if (currentFearLevels[fear] > fearLevelCaps[fear])
@@ -44,6 +52,10 @@ public class Human : MonoBehaviour
                 Debug.Log("I,  + name + , have reached my " + fear + " fear level cap and am now incapacitated");
             }
         }
+    }
 
+    private void doRoutine()
+    {
+        
     }
 }
