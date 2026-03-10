@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum ScareCard
 {
-    POLTERGEIST,
-    ENVIORMENTALGHOST,
-    SPIDER
+    RAT,
+    SPIDER,
+    SUPERNATURAL,
+    DECAY
 }
 
 public enum ScareType
@@ -13,22 +14,16 @@ public enum ScareType
     DISGUST,
     PARANOIA
 }
-public abstract class ScareEvent : MonoBehaviour
-{ private EnvironmentElement hostObject;
-    private ScareCard scareCard;
-    public ScareEvent(EnvironmentElement h, ScareCard c)
+public abstract class ScareEvent : Event
+{
+    private EnvironmentElement hostObject;
+    public ScareEvent(EnvironmentElement h)
     {
         hostObject = h;
-        scareCard = c;
     }
     public EnvironmentElement getHost()
     {
         return hostObject;
-    }
-
-    public ScareCard getCard()
-    {
-        return scareCard;
     }
     public abstract Dictionary<ScareType, int> spook();
 }

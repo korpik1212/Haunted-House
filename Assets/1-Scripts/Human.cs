@@ -16,7 +16,7 @@ public class Human : MonoBehaviour
 
     public List<RoutineEvent> routine;
     
-    public Room currentRoom;
+    private Room currentRoom;
     public Room startingRoom;
     
     Dictionary<Fear, int> fearLevelCaps = new Dictionary<Fear, int>();
@@ -25,16 +25,9 @@ public class Human : MonoBehaviour
 
     public void Start()
     {
-        currentRoom = startingRoom;
+        moveToRoom(startingRoom);
     }
-
-    public void MoveToRoom(Room room)
-    {
-        //move anim 
-
-        //event trigger 
-        // if there is a card that triggers when human enters room it triggers now 
-    }
+    
 
     public void DoSimulationStep()
     {
@@ -53,9 +46,42 @@ public class Human : MonoBehaviour
             }
         }
     }
+    
 
-    private void doRoutine()
+    public void moveToRoom(Room room)
     {
+        foreach (RoomConnection roomConnection in currentRoom.Pathways)
+        {
+            if (roomConnection.goesToRoom() == room && !roomConnection.IsLocked)
+            {
+                Debug.Log("Moving from " + currentRoom.name + " to " + room.name);
+                transform.position = room.transform.position;
+                checkTraps();
+                checkFears();
+                return;
+            }
+            
+            if (roomConnection.goesToRoom() == room && roomConnection.IsLocked)
+            {
+                Debug.Log("I, " + name + ", cannot move from " + currentRoom.name + " to " + room.name + " because the door is locked");
+                return;
+            }
+        }
+        
+        Debug.Log("I can't go to " + room.name + " because it's not connected to " + currentRoom.name + " where I currently am");
         
     }
+
+    public void checkTraps()
+    {
+            foreach (EnvironmentElement environmentElement in currentRoom.getEnvironmentElements())
+            {
+                if (environmentElement.hasTrap())
+                {
+                    environmentElement.GetTrap().spook();
+                }
+            }
+    }
+
+    public Room getCurrentRoom() => currentRoom;
 }

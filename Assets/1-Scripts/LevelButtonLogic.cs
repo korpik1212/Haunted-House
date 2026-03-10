@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class LevelButtonLogic : MonoBehaviour
 {
     public String levelToLoad;
     public Image levelThumbnail;
     public TextMeshProUGUI levelName;
-    public Button levelButton;
-    [Range(0f, 50f)] public float levelNameOffset;
+    public RectTransform levelButton;
+    [Range(0f, 200f)] public float levelNameOffset;
 
     public void Start()
     {
@@ -20,27 +21,31 @@ public class LevelButtonLogic : MonoBehaviour
 
     public void Update()
     {
-     if(areElementsUnalligned()) resizeElements();   
+        if (areElementsUnalligned())
+            resizeElements(); 
     }
 
     private bool areElementsUnalligned()
     {
-        if (levelButton.transform.localScale !=
-            new Vector3(levelThumbnail.sprite.rect.width, levelThumbnail.sprite.rect.height, 1) ||
-            levelName.transform.localPosition.Equals(new Vector2(levelName.transform.localPosition.x,
-                -(levelNameOffset + levelThumbnail.sprite.rect.height / 2)))) 
+        if (levelButton.sizeDelta !=
+            levelThumbnail.rectTransform.sizeDelta || !(levelName.transform.localPosition.Equals(new Vector2(levelThumbnail.transform.localPosition.x,
+                levelThumbnail.transform.localPosition.y - levelNameOffset))))
         {
             return true;
         }
+
         return false;
     }
 
     public void resizeElements()
     {
-        levelButton.transform.localScale =
-            new Vector3(levelThumbnail.sprite.rect.width, levelThumbnail.sprite.rect.height, 1);
-        levelName.transform.localPosition = new Vector2(levelName.transform.localPosition.x,
-            -(levelNameOffset + levelThumbnail.sprite.rect.height / 2));
+        Debug.Log("resizeElements");
+        levelButton.transform.localPosition=
+            levelThumbnail.transform.localPosition;
+        levelButton.sizeDelta=
+            levelThumbnail.rectTransform.sizeDelta;
+        levelName.transform.localPosition = new Vector2(levelThumbnail.transform.localPosition.x,
+            levelThumbnail.transform.localPosition.y - levelNameOffset);
     }
 
     public void onCLick()

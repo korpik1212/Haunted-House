@@ -53,23 +53,4 @@ public class House : MonoBehaviour
         }
         return humans;
     }
-    
-    public void DoSimulationStep()
-    {
-        foreach (Room room in rooms)
-        {
-            
-            //Simulate the events 
-            foreach (EnvironmentElement environmentElement in room.EnvironmentElements)
-            {
-                environmentElement.DoSimulationStep();
-            }
-            
-            //Simulate the humans' behaviors
-            foreach (Human human in humans)
-            {
-                //Make humans do teh next thing in their routine, or make them decide what to do next based on their fear levels and other factors
-            }
-        }
-    }
 }
