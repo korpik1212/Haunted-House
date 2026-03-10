@@ -22,7 +22,7 @@ public class LevelButtonLogic : MonoBehaviour
     public void Update()
     {
         if (areElementsUnalligned())
-            resizeElements(); //note to self: null ref exc happens because of levelThumbnail being null
+            resizeElements(); 
     }
 
     private bool areElementsUnalligned()
