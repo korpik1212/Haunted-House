@@ -1,0 +1,19 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpiderFridgeSchmevent : ScareSchmevent
+{
+    public SpiderFridgeSchmevent(EnvironmentElement h) : base(h)
+    {
+    }
+
+    public override Dictionary<ScareType, int> spook(Human human)
+    {
+        Debug.Log("Spider Fridge Event triggered");
+        Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
+        result.Add(ScareType.SHOCK,20);
+        result.Add(ScareType.DISGUST,50);
+        //todo animate event
+        return result;
+    }
+}

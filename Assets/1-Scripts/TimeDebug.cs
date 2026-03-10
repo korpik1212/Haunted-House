@@ -7,11 +7,11 @@ public class TimeDebug : MonoBehaviour
     public TMPro.TMP_Text timeText;
     public void onClick()
     {
-        TimeAndEventHandler.instance.advanceTime();
+        TimeAndEventHandler.getInstance().advanceTime();
     }
 
     public void Update()
     {
-        timeText.text = TimeAndEventHandler.instance.currentTime.ToLongTimeString();
+        timeText.text = TimeAndEventHandler.getInstance().currentTime.ToLongTimeString();
     }
 }
