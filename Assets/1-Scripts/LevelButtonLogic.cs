@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class LevelButtonLogic : MonoBehaviour
 {
@@ -20,27 +21,31 @@ public class LevelButtonLogic : MonoBehaviour
 
     public void Update()
     {
-     if(areElementsUnalligned()) resizeElements();   
+        if (areElementsUnalligned())
+            resizeElements(); //note to self: null ref exc happens because of levelThumbnail being null
     }
 
     private bool areElementsUnalligned()
     {
         if (levelButton.transform.localScale !=
-            new Vector3(levelThumbnail.sprite.rect.width, levelThumbnail.sprite.rect.height, 1) ||
-            levelName.transform.localPosition.Equals(new Vector2(levelName.transform.localPosition.x,
-                -(levelNameOffset + levelThumbnail.sprite.rect.height / 2)))) 
+            levelThumbnail.transform.localScale || levelName.transform.localPosition.Equals(new Vector2(levelThumbnail.transform.localPosition.x,
+                levelThumbnail.transform.localPosition.y - levelNameOffset)))
         {
             return true;
         }
+
         return false;
     }
 
     public void resizeElements()
     {
+        Debug.Log("resizeElements");
+        levelButton.transform.localPosition =
+            levelThumbnail.transform.localPosition;
         levelButton.transform.localScale =
-            new Vector3(levelThumbnail.sprite.rect.width, levelThumbnail.sprite.rect.height, 1);
-        levelName.transform.localPosition = new Vector2(levelName.transform.localPosition.x,
-            -(levelNameOffset + levelThumbnail.sprite.rect.height / 2));
+            levelThumbnail.transform.localScale;
+        levelName.transform.localPosition = new Vector2(levelThumbnail.transform.localPosition.x,
+            levelThumbnail.transform.localPosition.y - levelNameOffset);
     }
 
     public void onCLick()
