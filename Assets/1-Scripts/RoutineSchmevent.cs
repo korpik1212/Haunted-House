@@ -2,8 +2,6 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RoutineEvent", menuName = "ScriptableObjects/RoutineEvent", order = 1)]
-
 [Serializable]
 public class RoutineSchmevent : Schmevent
 {
