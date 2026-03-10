@@ -8,7 +8,7 @@ public class TimeAndEventHandler : MonoBehaviour
 
     public static TimeAndEventHandler instance;
     public DateTime currentTime;
-    public TimeSpan increment = TimeSpan.FromHours(1);
+    public TimeSpan increment = TimeSpan.FromMinutes(10);
     public House house;
     private void Awake()
     {
@@ -26,17 +26,19 @@ public class TimeAndEventHandler : MonoBehaviour
 
     public void Update()
     {
-        //currentTime += increment*Time.deltaTime;
+        
     }
 
     public void advanceTime()
     {
+        Debug.Log("Advanced Time");
         currentTime += increment;
-        
+        doRoutines();   
     }
 
     public void doRoutines()
     {
+        Debug.Log("Do Routines");
         foreach (Human human in house.humans)
         {
             foreach (RoutineSchmevent routineEvent in human.routine)
@@ -51,6 +53,8 @@ public class TimeAndEventHandler : MonoBehaviour
 
     public void PerformRoutineEvent(Human human, RoutineSchmevent routineSchmevent)
     {
+        
+        Debug.Log("Performing Routine. Human: "+human.name+" Start time: "+routineSchmevent.getStartTime().ToLongTimeString());
         human.moveToRoom(routineSchmevent.destinationRoom.GetComponent<Room>());
         if (routineSchmevent.additionalEffect != null && human.getCurrentRoom() == routineSchmevent.destinationRoom)
         {

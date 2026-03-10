@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1801dac4b3af903b1e0b00fee40512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeAndEventHandler
-  house: {fileID: 0}
+  house: {fileID: 1332997945}
 --- !u!1 &239563954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,6 +2908,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+--- !u!114 &1332997945 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4146741293704673702, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+  m_PrefabInstance: {fileID: 1332997944}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f72114eb559019cebe0a3ea7badc74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::House
 --- !u!1 &1356474622
 GameObject:
   m_ObjectHideFlags: 0

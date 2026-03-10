@@ -18,7 +18,7 @@ public class RoutineSchmevent : Schmevent
     public void setupRoutineEvent()
     {
         startTime = new DateTime(2026, 1, 1, startTimeHour, startTimeMinute, 0);
-        duration = TimeSpan.FromMinutes(durationInTicks);
+        duration = TimeSpan.FromMinutes(durationInTicks*TimeAndEventHandler.instance.increment.Minutes);
     }
     
 
