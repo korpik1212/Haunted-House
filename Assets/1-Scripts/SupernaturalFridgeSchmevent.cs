@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace _1_Scripts.ScareEvents
 {
-    public class SupernaturalFridgeEvent : ScareEvent
+    public class SupernaturalFridgeSchmevent : ScareSchmevent
     {
-        public SupernaturalFridgeEvent(EnvironmentElement h) : base(h)
+        public SupernaturalFridgeSchmevent(EnvironmentElement h) : base(h)
         {
         }
 
-        public override Dictionary<ScareType, int> spook()
+        public override Dictionary<ScareType, int> spook(Human human)
         {
             Debug.Log("Supernatural Fridge Event triggered");
             Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();

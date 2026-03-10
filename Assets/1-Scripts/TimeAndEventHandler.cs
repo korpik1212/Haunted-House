@@ -39,7 +39,7 @@ public class TimeAndEventHandler : MonoBehaviour
     {
         foreach (Human human in house.humans)
         {
-            foreach (RoutineEvent routineEvent in human.routine)
+            foreach (RoutineSchmevent routineEvent in human.routine)
             {
                 if (routineEvent.getStartTime().Equals(currentTime))
                 {
@@ -49,10 +49,14 @@ public class TimeAndEventHandler : MonoBehaviour
         }
     }
 
-    public void PerformRoutineEvent(Human human, RoutineEvent routineEvent)
+    public void PerformRoutineEvent(Human human, RoutineSchmevent routineSchmevent)
     {
-        human.moveToRoom(routineEvent.destinationRoom.GetComponent<Room>());
-        routineEvent.DoAdditionalEffect(routineEvent.destinationRoom.GetComponent<Room>(), human);
+        human.moveToRoom(routineSchmevent.destinationRoom.GetComponent<Room>());
+        if (routineSchmevent.additionalEffect != null && human.getCurrentRoom() == routineSchmevent.destinationRoom)
+        {
+            routineSchmevent.additionalEffect.DoEffect(human, routineSchmevent.destinationRoom.GetComponent<Room>());
+        }
+
     }
 
     [ContextMenu("Trigger All Events")]
@@ -65,42 +69,42 @@ public class TimeAndEventHandler : MonoBehaviour
     {
         if (getScareEvent(scareCard, host) != null)
         {
-            ScareEvent eventToAdd = getScareEvent(scareCard, host);
+            ScareSchmevent schmeventToAdd = getScareEvent(scareCard, host);
 
             if (host.checkTimeSlotAvailability())
             {
-                host.setTrap(eventToAdd);
+                host.setTrap(schmeventToAdd);
             }
         }
     }
 
-    private ScareEvent getScareEvent(ScareCard sc, EnvironmentElement h)
+    private ScareSchmevent getScareEvent(ScareCard sc, EnvironmentElement h)
     {
-        ScareEvent result = null;
+        ScareSchmevent result = null;
         switch (sc)
         {
             case ScareCard.SUPERNATURAL :
                 switch (h.type)
                 {
                     case EnvironmentElementType.POLSTERED:
-                        result = new TestEvent(h, sc);
+                        result = new TestSchmevent(h, sc);
                         Debug.Log("assigned event");
                         //todo result= new SUPERNATURAL_COUCH_EVENT()
                         break;
                     case EnvironmentElementType.BOOKSHELF:
-                        result = new SupernaturalBookshelfEvent(h);
+                        result = new SupernaturalBookshelfSchmevent(h);
                         break;
                     case EnvironmentElementType.DOOR:
                         //todo result= new SUPERNATURAL_DOOR_EVENT()
                         break;
                     case EnvironmentElementType.FRIDGE:
-                        result = new SupernaturalFridgeEvent(h);
+                        result = new SupernaturalFridgeSchmevent(h);
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
                         //todo result= new SUPERNATURAL_LIGHTSWITCH_EVENT()
                         break;
                     case EnvironmentElementType.MIRROR:
-                        result = new SupernaturalMirrorEvent(h);
+                        result = new SupernaturalMirrorSchmevent(h);
                         break;
                     case EnvironmentElementType.PIPES:
                         //todo result= new SUPERNATURAL_PIPES_EVENT()
@@ -114,7 +118,7 @@ public class TimeAndEventHandler : MonoBehaviour
                 switch (h.type)
                 {
                     case EnvironmentElementType.POLSTERED:
-                        result = new DecayPolsteredEvent(h);
+                        result = new DecayPolsteredSchmevent(h);
                         break;
                     case EnvironmentElementType.BOOKSHELF:
                         //todo result= new DECAY_BOOKSHELF_EVENT()
@@ -123,16 +127,16 @@ public class TimeAndEventHandler : MonoBehaviour
                         //todo result= new DECAY_DOOR_EVENT()
                         break;
                     case EnvironmentElementType.FRIDGE:
-                        result = new DecayFridgeEvent(h);
+                        result = new DecayFridgeSchmevent(h);
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
-                        result = new DecayLightswitchEvent(h);
+                        result = new DecayLightswitchSchmevent(h);
                         break;
                     case EnvironmentElementType.MIRROR:
                         //todo result= new DECAY_MIRROR_EVENT()
                         break;
                     case EnvironmentElementType.PIPES:
-                        result = new DecayPipesEvent(h);
+                        result = new DecayPipesSchmevent(h);
                         break;
                     case EnvironmentElementType.PLUSHY:
                         //todo result= new DECAY_PLUSHY_EVENT()
@@ -143,25 +147,25 @@ public class TimeAndEventHandler : MonoBehaviour
                 switch (h.type)
                 {
                     case EnvironmentElementType.POLSTERED:
-                        result = new SpiderPolsteredEvent(h);
+                        result = new SpiderPolsteredSchmevent(h);
                         break;
                     case EnvironmentElementType.BOOKSHELF:
-                        result = new SpiderBookshelfEvent(h);
+                        result = new SpiderBookshelfSchmevent(h);
                         break;
                     case EnvironmentElementType.DOOR:
-                        result = new SpiderDoorEvent(h);
+                        result = new SpiderDoorSchmevent(h);
                         break;
                     case EnvironmentElementType.FRIDGE:
-                        result = new SpiderFridgeEvent(h);
+                        result = new SpiderFridgeSchmevent(h);
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
-                        result = new SpiderLightswitchEvent(h);
+                        result = new SpiderLightswitchSchmevent(h);
                         break;
                     case EnvironmentElementType.MIRROR:
-                        result = new SpiderMirrorEvent(h);
+                        result = new SpiderMirrorSchmevent(h);
                         break;
                     case EnvironmentElementType.PIPES:
-                        result = new SpiderPipesEvent(h);
+                        result = new SpiderPipesSchmevent(h);
                         break;
                     case EnvironmentElementType.PLUSHY:
                         //todo result= new SPIDER_PLUSHY_EVENT()
@@ -175,16 +179,16 @@ public class TimeAndEventHandler : MonoBehaviour
                         //todo result= new RAT_COUCH_EVENT()
                         break;
                     case EnvironmentElementType.BOOKSHELF:
-                        result = new RatBookshelfEvent(h);
+                        result = new RatBookshelfSchmevent(h);
                         break;
                     case EnvironmentElementType.DOOR:
-                        result = new RatDoorEvent(h);
+                        result = new RatDoorSchmevent(h);
                         break;
                     case EnvironmentElementType.FRIDGE:
                         //todo result= new RAT_FRIDGE_EVENT()
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
-                        result = new RatLightswitchEvent(h);
+                        result = new RatLightswitchSchmevent(h);
                         break;
                     case EnvironmentElementType.MIRROR:
                         //todo result= new RAT_MIRROR_EVENT()
@@ -202,14 +206,14 @@ public class TimeAndEventHandler : MonoBehaviour
         return result;
     }
 
-    public class TestEvent : ScareEvent
+    public class TestSchmevent : ScareSchmevent
     {
-        public TestEvent(EnvironmentElement h, ScareCard c) : base(h)
+        public TestSchmevent(EnvironmentElement h, ScareCard c) : base(h)
         {
 
         }
 
-        public override Dictionary<ScareType, int> spook()
+        public override Dictionary<ScareType, int> spook(Human human)
         {
 
             Debug.Log("hello");

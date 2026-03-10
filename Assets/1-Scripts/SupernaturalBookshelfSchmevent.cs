@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SupernaturalBookshelfEvent : ScareEvent
+public class SupernaturalBookshelfSchmevent : ScareSchmevent
 {
-    public SupernaturalBookshelfEvent(EnvironmentElement h) : base(h)
+    public SupernaturalBookshelfSchmevent(EnvironmentElement h) : base(h)
     {
     }
 
-    public override Dictionary<ScareType, int> spook()
+    public override Dictionary<ScareType, int> spook(Human human)
     {
         Debug.Log("Supernatural Bookshelf Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();

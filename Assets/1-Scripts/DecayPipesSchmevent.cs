@@ -2,13 +2,13 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
 
-public class DecayPipesEvent : ScareEvent
+public class DecayPipesSchmevent : ScareSchmevent
 {
-    public DecayPipesEvent(EnvironmentElement h) : base(h)
+    public DecayPipesSchmevent(EnvironmentElement h) : base(h)
     {
     }
 
-    public override Dictionary<ScareType, int> spook()
+    public override Dictionary<ScareType, int> spook(Human human)
     {
         Debug.Log("Decay Pipes Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();

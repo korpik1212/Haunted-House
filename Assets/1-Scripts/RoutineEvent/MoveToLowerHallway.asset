@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d305e251c6e3996939e0dce48518f414, type: 3}
-  m_Name: RoutineEvent
+  m_Name: MoveToLowerHallway
   m_EditorClassIdentifier: Assembly-CSharp::RoutineEvent
+  hour: 0
+  minute: 0
   destinationRoom: {fileID: 0}
+  additionalEffect: {fileID: 11400000, guid: eefba025c83efef2985fc12797c44b78, type: 2}

@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SupernaturalMirrorEvent : ScareEvent
+public class SupernaturalMirrorSchmevent : ScareSchmevent
 {
-    public SupernaturalMirrorEvent(EnvironmentElement h) : base(h)
+    public SupernaturalMirrorSchmevent(EnvironmentElement h) : base(h)
     {
     }
 
-    public override Dictionary<ScareType, int> spook()
+    public override Dictionary<ScareType, int> spook(Human human)
     {
         Debug.Log("Supernatural Mirror Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();

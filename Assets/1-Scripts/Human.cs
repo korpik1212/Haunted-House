@@ -14,39 +14,59 @@ public enum Fear
 public class Human : MonoBehaviour
 {
 
-    public List<RoutineEvent> routine;
+    public List<RoutineSchmevent> routine;
     
     private Room currentRoom;
     public Room startingRoom;
     
     Dictionary<Fear, int> fearLevelCaps = new Dictionary<Fear, int>();
     Dictionary<Fear, int> currentFearLevels = new Dictionary<Fear, int>();
-
-
+    
     public void Start()
     {
         moveToRoom(startingRoom);
+        setupRoutine();
+    }
+
+    public void setupRoutine()
+    {
+        foreach (RoutineSchmevent routineEvent in routine)
+        {
+            routineEvent.setupRoutineEvent();
+        }
     }
     
-
-    public void DoSimulationStep()
-    {
-        
-        checkFears();
-
-    }
-
     private void checkFears()
     {
         foreach (Fear fear in fearLevelCaps.Keys)
         {
-            if (currentFearLevels[fear] > fearLevelCaps[fear])
+            if (currentFearLevels[fear] >= fearLevelCaps[fear])
             {
-                Debug.Log("I,  + name + , have reached my " + fear + " fear level cap and am now incapacitated");
+                Debug.Log("I, "  + name + ", have reached my " + fear + " fear level cap and am now incapacitated");
             }
         }
     }
-    
+
+    private void spookReaction(ScareSchmevent t)
+    {
+                    
+        var scaresSuffered = t.spook(this);
+        foreach (KeyValuePair<ScareType, int> scare in scaresSuffered)
+        {
+            switch (scare.Key)
+            {
+                case ScareType.DISGUST:
+                    currentFearLevels[Fear.Disgust] += scare.Value;
+                    break;
+                case ScareType.PARANOIA:
+                    currentFearLevels[Fear.Paranoia] += scare.Value;
+                    break;
+                case ScareType.SHOCK:
+                    currentFearLevels[Fear.Shock] += scare.Value;
+                    break;
+            }
+        }
+    } 
 
     public void moveToRoom(Room room)
     {
@@ -78,7 +98,7 @@ public class Human : MonoBehaviour
             {
                 if (environmentElement.hasTrap())
                 {
-                    environmentElement.GetTrap().spook();
+                    spookReaction(environmentElement.GetTrap());
                 }
             }
     }

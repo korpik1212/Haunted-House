@@ -5,8 +5,9 @@ using UnityEngine.UIElements;
 
 
 [Serializable]
-public abstract class Event : ScriptableObject
+public abstract class Schmevent
 {
+    
     public DateTime startTime;
     public TimeSpan duration;
 

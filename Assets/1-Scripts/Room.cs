@@ -36,5 +36,18 @@ public class Room : MonoBehaviour
         gatherRoomElements();
     }
 
+    public void LockConnectionTo(Room room)
+    {
+        foreach (RoomConnection roomConnection in Pathways)
+        {
+            if (roomConnection.goesToRoom() == room)
+            {
+                roomConnection.IsLocked = true;
+                Debug.Log("Locked connection from " + name + " to " + room.name);
+            }
+        }
+        
+    }
+
     
 }

@@ -14,10 +14,10 @@ public enum ScareType
     DISGUST,
     PARANOIA
 }
-public abstract class ScareEvent : Event
+public abstract class ScareSchmevent : Schmevent
 {
     private EnvironmentElement hostObject;
-    public ScareEvent(EnvironmentElement h)
+    public ScareSchmevent(EnvironmentElement h)
     {
         hostObject = h;
     }
@@ -25,5 +25,5 @@ public abstract class ScareEvent : Event
     {
         return hostObject;
     }
-    public abstract Dictionary<ScareType, int> spook();
+    public abstract Dictionary<ScareType, int> spook(Human human);
 }

@@ -24,12 +24,12 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     // * Events<>
     // * functionality to check time availability and other shit()
 
-    private ScareEvent Trap = null;
+    private ScareSchmevent Trap = null;
 
     public EnvironmentElementType type;
     
 
-    public void setTrap(ScareEvent e)
+    public void setTrap(ScareSchmevent e)
     {
         Trap = e;
     }
@@ -44,7 +44,7 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
         return Trap != null;
     }
 
-    public ScareEvent GetTrap()
+    public ScareSchmevent GetTrap()
     {
         return Trap;
     }
