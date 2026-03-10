@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _1_Scripts.ScareEvents;
 using UnityEngine;
 
 public class TimeAndEventHandler : MonoBehaviour
@@ -93,13 +94,13 @@ public class TimeAndEventHandler : MonoBehaviour
                         //todo result= new SUPERNATURAL_DOOR_EVENT()
                         break;
                     case EnvironmentElementType.FRIDGE:
-                        //todo result= new SUPERNATURAL_FRIDGE_EVENT()
+                        result = new SupernaturalFridgeEvent(h);
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
                         //todo result= new SUPERNATURAL_LIGHTSWITCH_EVENT()
                         break;
                     case EnvironmentElementType.MIRROR:
-                        //todo result= new SUPERNATURAL_MIRROR_EVENT()
+                        result = new SupernaturalMirrorEvent(h);
                         break;
                     case EnvironmentElementType.PIPES:
                         //todo result= new SUPERNATURAL_PIPES_EVENT()
@@ -211,7 +212,7 @@ public class TimeAndEventHandler : MonoBehaviour
         public override Dictionary<ScareType, int> spook()
         {
 
-            Debug.Log("helooo");
+            Debug.Log("hello");
 
             return null;
         }
