@@ -50,7 +50,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  Pathways: []
+  Pathways:
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 1959543153019353300}
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 6250539238509953344}
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 8484648118377753152}
 --- !u!222 &5396082298550547206
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -168,7 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  Pathways: []
+  Pathways:
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 2102783542443179581}
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 8267612214311252588}
 --- !u!222 &2017731044833954391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -263,9 +273,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 25.477457, y: 25.477457, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3939933386647000390}
   - {fileID: 817949429072391743}
   - {fileID: 5299020742788580960}
   - {fileID: 5987716766188710277}
@@ -274,7 +285,6 @@ Transform:
   - {fileID: 4303165186293214569}
   - {fileID: 4322771369108952586}
   - {fileID: 6006592874033576921}
-  - {fileID: 3939933386647000390}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4146741293704673702
@@ -344,7 +354,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   Pathways:
   - IsLocked: 0
-    goesToRoomObject: {fileID: 0}
+    goesToRoomObject: {fileID: 8267612214311252588}
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 703951388558763074}
 --- !u!222 &7796842122541651631
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -462,7 +474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  Pathways: []
+  Pathways:
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 2102783542443179581}
 --- !u!222 &1073852198752755386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -732,7 +746,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  Pathways: []
+  Pathways:
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 1959543153019353300}
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 7761162333135876121}
 --- !u!222 &7991063367880026523
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1002,7 +1020,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  Pathways: []
+  Pathways:
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 6250539238509953344}
 --- !u!222 &7548027319537906470
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1120,7 +1140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
-  Pathways: []
+  Pathways:
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 879445896961043232}
+  - IsLocked: 0
+    goesToRoomObject: {fileID: 1959543153019353300}
 --- !u!222 &1218054093683169163
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1242,7 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   Pathways:
   - IsLocked: 0
-    goesToRoomObject: {fileID: 0}
+    goesToRoomObject: {fileID: 703951388558763074}
 --- !u!222 &3947345122253247533
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1363,6 +1387,10 @@ PrefabInstance:
       value: Husband_(bernhard)
       objectReference: {fileID: 0}
     - target: {fileID: 7573297166564122046, guid: 00e0a1172be0a50479e62440f2f63842, type: 3}
+      propertyPath: startingRoom
+      value: 
+      objectReference: {fileID: 1970239243414101671}
+    - target: {fileID: 7573297166564122046, guid: 00e0a1172be0a50479e62440f2f63842, type: 3}
       propertyPath: routine.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1397,7 +1425,7 @@ PrefabInstance:
     - target: {fileID: 7573297166564122046, guid: 00e0a1172be0a50479e62440f2f63842, type: 3}
       propertyPath: routine.Array.data[0].destinationRoom
       value: 
-      objectReference: {fileID: 1518104344395103093}
+      objectReference: {fileID: 715950567399798388}
     - target: {fileID: 7573297166564122046, guid: 00e0a1172be0a50479e62440f2f63842, type: 3}
       propertyPath: routine.Array.data[0].durationInTicks
       value: 0

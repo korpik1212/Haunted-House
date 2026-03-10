@@ -3,29 +3,27 @@ using System.Collections.Generic;
 using _1_Scripts.ScareEvents;
 using UnityEngine;
 
-public class TimeAndEventHandler : MonoBehaviour
+public class TimeAndEventHandler
 {
 
-    public static TimeAndEventHandler instance;
+    private static TimeAndEventHandler instance;
     public DateTime currentTime;
     public TimeSpan increment = TimeSpan.FromMinutes(10);
     public House house;
-    private void Awake()
+    private void setupInstance()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
-
         currentTime = new DateTime(2026, 1, 1, 0, 0, 0);
     }
 
-    public void Update()
+    public static TimeAndEventHandler getInstance()
     {
+        if (instance == null)
+        {
+            instance = new TimeAndEventHandler();
+            instance.setupInstance();
+        }
+        
+        return instance;
         
     }
 
@@ -41,6 +39,7 @@ public class TimeAndEventHandler : MonoBehaviour
         Debug.Log("Do Routines");
         foreach (Human human in house.humans)
         {
+            Debug.Log("Human " + human.name + " is " + human.getCurrentRoom());
             foreach (RoutineSchmevent routineEvent in human.routine)
             {
                 if (routineEvent.getStartTime().Equals(currentTime))

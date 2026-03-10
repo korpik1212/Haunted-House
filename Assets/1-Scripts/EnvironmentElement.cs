@@ -72,7 +72,7 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     {
         Debug.Log(card.CardType.ToString());
         Debug.Log(gameObject.name);
-        TimeAndEventHandler.instance.SetTrap(card.CardType, this);
+        TimeAndEventHandler.getInstance().SetTrap(card.CardType, this);
     }
 }
 

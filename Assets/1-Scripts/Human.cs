@@ -24,16 +24,29 @@ public class Human : MonoBehaviour
     
     public void Start()
     {
-        moveToRoom(startingRoom);
-        setupRoutine();
+        
+        currentRoom = startingRoom;
+        transform.position = currentRoom.transform.position;
+
     }
 
+    private void Awake()
+    {
+        Debug.Log("Awake");
+        setupRoutine();
+    }
+    
     public void setupRoutine()
     {
+        Debug.Log("setupRoutine");
+        int i = 0;
         foreach (RoutineSchmevent routineEvent in routine)
         {
-            routineEvent.setupRoutineEvent();
+            i++;
+            Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);    
+            routineEvent.SetupRoutineEvent();
         }
+        Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);
     }
     
     private void checkFears()
@@ -76,6 +89,7 @@ public class Human : MonoBehaviour
             {
                 Debug.Log("Moving from " + currentRoom.name + " to " + room.name);
                 transform.position = room.transform.position;
+                currentRoom = room;
                 checkTraps();
                 checkFears();
                 return;
