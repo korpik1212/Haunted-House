@@ -8,6 +8,7 @@ public class TimeAndEventHandler : MonoBehaviour
     public static TimeAndEventHandler instance;
     public DateTime currentTime;
     public TimeSpan increment = TimeSpan.FromHours(1);
+    public House house;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -32,7 +33,27 @@ public class TimeAndEventHandler : MonoBehaviour
         currentTime += increment;
         
     }
-    
+
+    public void doRoutines()
+    {
+        foreach (Human human in house.humans)
+        {
+            foreach (RoutineEvent routineEvent in human.routine)
+            {
+                if (routineEvent.getStartTime().Equals(currentTime))
+                {
+                    PerformRoutineEvent(human, routineEvent);
+                }
+            }
+        }
+    }
+
+    public void PerformRoutineEvent(Human human, RoutineEvent routineEvent)
+    {
+        human.moveToRoom(routineEvent.destinationRoom.GetComponent<Room>());
+        routineEvent.DoAdditionalEffect(routineEvent.destinationRoom.GetComponent<Room>(), human);
+    }
+
     [ContextMenu("Trigger All Events")]
     public void TestTriggerCommand()
     {
