@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TimeDebug : MonoBehaviour
 {
+    
     public TMPro.TMP_Text timeText;
     public void onClick()
     {
