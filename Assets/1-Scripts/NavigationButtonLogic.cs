@@ -9,11 +9,11 @@ public class NavigationButtonLogic : MonoBehaviour
     }
     public static void enterLevelSelection()
     {
-        SceneManager.LoadSceneAsync("LevelSelection");
+        SceneManager.LoadSceneAsync("LevelSelect");
     }
     public static void enterSettingsMenu()
     {
-        SceneManager.LoadSceneAsync("SettingsMenu");
+        SceneManager.LoadSceneAsync("Settings");
     }
 
     public static void exitGame()
