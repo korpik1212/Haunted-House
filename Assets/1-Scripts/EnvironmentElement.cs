@@ -6,9 +6,14 @@ using UnityEngine.Audio;
 
 public enum EnvironmentElementType
 {
+    PIPES,
+    BOOKSHELF,
+    LIGHTSWITCH,
+    POLSTERED,
+    FRIDGE,
     MIRROR,
-    SINK,
-    COUCH
+    DOOR,
+    PLUSHY
 }
 
 
@@ -52,7 +57,7 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
 
     public void OnHoverEnter()
     {
-        Debug.Log("hoverinn");
+        Debug.Log("hovering");
     }
 
     public void OnTargetHoverExit(Card card)
@@ -67,7 +72,7 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     {
         Debug.Log(card.CardType.ToString());
         Debug.Log(gameObject.name);
-        TimeAndEventHandler.instance.AssignEvent(card.CardType, this, startTime: DateTime.Now);
+        TimeAndEventHandler.instance.SetTrap(card.CardType, this);
     }
 }
 

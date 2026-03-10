@@ -60,11 +60,10 @@ public class TimeAndEventHandler : MonoBehaviour
         
     }
 
-    public void AssignEvent(ScareCard scareCard, EnvironmentElement host, DateTime startTime)
+    public void SetTrap(ScareCard scareCard, EnvironmentElement host)
     {
         if (getScareEvent(scareCard, host) != null)
         {
-
             ScareEvent eventToAdd = getScareEvent(scareCard, host);
 
             if (host.checkTimeSlotAvailability())
@@ -79,66 +78,142 @@ public class TimeAndEventHandler : MonoBehaviour
         ScareEvent result = null;
         switch (sc)
         {
-            case ScareCard.ENVIORMENTALGHOST :
+            case ScareCard.SUPERNATURAL :
                 switch (h.type)
                 {
-                    case EnvironmentElementType.COUCH:
+                    case EnvironmentElementType.POLSTERED:
                         result = new TestEvent(h, sc);
                         Debug.Log("assigned event");
-                        //todo result= new ENVIRONMENTALGHOST_COUCH_EVENT()
+                        //todo result= new SUPERNATURAL_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.BOOKSHELF:
+                        result = new SupernaturalBookshelfEvent(h);
+                        break;
+                    case EnvironmentElementType.DOOR:
+                        //todo result= new SUPERNATURAL_DOOR_EVENT()
+                        break;
+                    case EnvironmentElementType.FRIDGE:
+                        //todo result= new SUPERNATURAL_FRIDGE_EVENT()
+                        break;
+                    case EnvironmentElementType.LIGHTSWITCH:
+                        //todo result= new SUPERNATURAL_LIGHTSWITCH_EVENT()
                         break;
                     case EnvironmentElementType.MIRROR:
-                        //todo result= new ENVIRONMENTALGHOST_MIRROR_EVENT()
+                        //todo result= new SUPERNATURAL_MIRROR_EVENT()
                         break;
-                    case EnvironmentElementType.SINK:
-                        //todo result= new ENVIRONMENTALGHOST_SINK_EVENT()
+                    case EnvironmentElementType.PIPES:
+                        //todo result= new SUPERNATURAL_PIPES_EVENT()
+                        break;
+                    case EnvironmentElementType.PLUSHY:
+                        //todo result= new SUPERNATURAL_PLUSHY_EVENT()
                         break;
                 }
                 break;
-            case ScareCard.POLTERGEIST :
+            case ScareCard.DECAY :
                 switch (h.type)
                 {
-                    case EnvironmentElementType.COUCH:
-                        //todo result= new POLTERGEIST_COUCH_EVENT()
+                    case EnvironmentElementType.POLSTERED:
+                        //todo result= new DECAY_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.BOOKSHELF:
+                        //todo result= new DECAY_BOOKSHELF_EVENT()
+                        break;
+                    case EnvironmentElementType.DOOR:
+                        //todo result= new DECAY_DOOR_EVENT()
+                        break;
+                    case EnvironmentElementType.FRIDGE:
+                        //todo result= new DECAY_FRIDGE_EVENT()
+                        break;
+                    case EnvironmentElementType.LIGHTSWITCH:
+                        //todo result= new DECAY_LIGHTSWITCH_EVENT()
                         break;
                     case EnvironmentElementType.MIRROR:
-                        //todo result= new POLTERGEIST_MIRROR_EVENT()
+                        //todo result= new DECAY_MIRROR_EVENT()
                         break;
-                    case EnvironmentElementType.SINK:
-                        //todo result= new POLTERGEIST_SINK_EVENT()
+                    case EnvironmentElementType.PIPES:
+                        //todo result= new DECAY_PIPES_EVENT()
+                        break;
+                    case EnvironmentElementType.PLUSHY:
+                        //todo result= new DECAY_PLUSHY_EVENT()
                         break;
                 }
                 break;
             case ScareCard.SPIDER :
                 switch (h.type)
                 {
-                    case EnvironmentElementType.COUCH:
+                    case EnvironmentElementType.POLSTERED:
                         //todo result= new SPIDER_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.BOOKSHELF:
+                        //todo result= new SPIDER_BOOKSHELF_EVENT()
+                        break;
+                    case EnvironmentElementType.DOOR:
+                        //todo result= new SPIDER_DOOR_EVENT()
+                        break;
+                    case EnvironmentElementType.FRIDGE:
+                        //todo result= new SPIDER_FRIDGE_EVENT()
+                        break;
+                    case EnvironmentElementType.LIGHTSWITCH:
+                        //todo result= new SPIDER_LIGHTSWITCH_EVENT()
                         break;
                     case EnvironmentElementType.MIRROR:
                         //todo result= new SPIDER_MIRROR_EVENT()
                         break;
-                    case EnvironmentElementType.SINK:
-                        //todo result= new SPIDER_SINK_EVENT()
+                    case EnvironmentElementType.PIPES:
+                        //todo result= new SPIDER_PIPES_EVENT()
+                        break;
+                    case EnvironmentElementType.PLUSHY:
+                        //todo result= new SPIDER_PLUSHY_EVENT()
+                        break;
+                }
+                break;
+            case ScareCard.RAT :
+                switch (h.type)
+                {
+                    case EnvironmentElementType.POLSTERED:
+                        //todo result= new RAT_COUCH_EVENT()
+                        break;
+                    case EnvironmentElementType.BOOKSHELF:
+                        //todo result= new RAT_BOOKSHELF_EVENT()
+                        break;
+                    case EnvironmentElementType.DOOR:
+                        //todo result= new RAT_DOOR_EVENT()
+                        break;
+                    case EnvironmentElementType.FRIDGE:
+                        //todo result= new RAT_FRIDGE_EVENT()
+                        break;
+                    case EnvironmentElementType.LIGHTSWITCH:
+                        //todo result= new RAT_LIGHTSWITCH_EVENT()
+                        break;
+                    case EnvironmentElementType.MIRROR:
+                        //todo result= new RAT_MIRROR_EVENT()
+                        break;
+                    case EnvironmentElementType.PIPES:
+                        //todo result= new RAT_PIPES_EVENT()
+                        break;
+                    case EnvironmentElementType.PLUSHY:
+                        //todo result= new RAT_SINK_EVENT()
                         break;
                 }
                 break;
         }
+        h.setTrap(result);
         return result;
     }
-}
 
-public class TestEvent : ScareEvent
-{
-    public TestEvent(EnvironmentElement h, ScareCard c) : base(h, c)
+    public class TestEvent : ScareEvent
     {
+        public TestEvent(EnvironmentElement h, ScareCard c) : base(h)
+        {
 
-    }
-    public override Dictionary<ScareType, int> spook()
-    {
+        }
 
-        Debug.Log("helooo");
+        public override Dictionary<ScareType, int> spook()
+        {
 
-        return null;
+            Debug.Log("helooo");
+
+            return null;
+        }
     }
 }
