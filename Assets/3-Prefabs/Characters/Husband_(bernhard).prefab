@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: -6430878481603615894, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6781819408390703257, guid: 717dacdf052048c40aa60618043b247a, type: 3}
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: -5560515795807194239, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -151,6 +151,10 @@ PrefabInstance:
     - target: {fileID: 1442452958461602558, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 3.155
+      objectReference: {fileID: 0}
+    - target: {fileID: 2270121866413512802, guid: 717dacdf052048c40aa60618043b247a, type: 3}
+      propertyPath: m_BoneTransforms.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2396799145762814221, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalPosition.x
