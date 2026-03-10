@@ -11,8 +11,8 @@ public class LevelButtonLogic : MonoBehaviour
     public String levelToLoad;
     public Image levelThumbnail;
     public TextMeshProUGUI levelName;
-    public Button levelButton;
-    [Range(0f, 50f)] public float levelNameOffset;
+    public RectTransform levelButton;
+    [Range(0f, 200f)] public float levelNameOffset;
 
     public void Start()
     {
@@ -27,9 +27,9 @@ public class LevelButtonLogic : MonoBehaviour
 
     private bool areElementsUnalligned()
     {
-        if (levelButton.transform.localScale !=
-            levelThumbnail.transform.localScale || levelName.transform.localPosition.Equals(new Vector2(levelThumbnail.transform.localPosition.x,
-                levelThumbnail.transform.localPosition.y - levelNameOffset)))
+        if (levelButton.sizeDelta !=
+            levelThumbnail.rectTransform.sizeDelta || !(levelName.transform.localPosition.Equals(new Vector2(levelThumbnail.transform.localPosition.x,
+                levelThumbnail.transform.localPosition.y - levelNameOffset))))
         {
             return true;
         }
@@ -40,10 +40,10 @@ public class LevelButtonLogic : MonoBehaviour
     public void resizeElements()
     {
         Debug.Log("resizeElements");
-        levelButton.transform.localPosition =
+        levelButton.transform.localPosition=
             levelThumbnail.transform.localPosition;
-        levelButton.transform.localScale =
-            levelThumbnail.transform.localScale;
+        levelButton.sizeDelta=
+            levelThumbnail.rectTransform.sizeDelta;
         levelName.transform.localPosition = new Vector2(levelThumbnail.transform.localPosition.x,
             levelThumbnail.transform.localPosition.y - levelNameOffset);
     }

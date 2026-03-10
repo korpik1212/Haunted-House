@@ -261,7 +261,7 @@ MonoBehaviour:
   levelToLoad: 
   levelThumbnail: {fileID: 1350908816656820669}
   levelName: {fileID: 3045982767458873672}
-  levelButton: {fileID: 6484599116448814106}
+  levelButton: {fileID: 2838968470363539352}
   levelNameOffset: 20
 --- !u!1 &8468585556576912721
 GameObject:
