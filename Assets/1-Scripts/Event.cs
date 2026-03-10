@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
+[Serializable]
 public abstract class Event : ScriptableObject
 {
-    private DateTime startTime;
-    private TimeSpan duration;
+    public DateTime startTime;
+    public TimeSpan duration;
 
     public void setStartTime(DateTime time)
     {
