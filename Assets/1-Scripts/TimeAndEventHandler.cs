@@ -114,7 +114,7 @@ public class TimeAndEventHandler : MonoBehaviour
                 switch (h.type)
                 {
                     case EnvironmentElementType.POLSTERED:
-                        //todo result= new DECAY_COUCH_EVENT()
+                        result = new DecayPolsteredEvent(h);
                         break;
                     case EnvironmentElementType.BOOKSHELF:
                         //todo result= new DECAY_BOOKSHELF_EVENT()
@@ -123,16 +123,16 @@ public class TimeAndEventHandler : MonoBehaviour
                         //todo result= new DECAY_DOOR_EVENT()
                         break;
                     case EnvironmentElementType.FRIDGE:
-                        //todo result= new DECAY_FRIDGE_EVENT()
+                        result = new DecayFridgeEvent(h);
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
-                        //todo result= new DECAY_LIGHTSWITCH_EVENT()
+                        result = new DecayLightswitchEvent(h);
                         break;
                     case EnvironmentElementType.MIRROR:
                         //todo result= new DECAY_MIRROR_EVENT()
                         break;
                     case EnvironmentElementType.PIPES:
-                        //todo result= new DECAY_PIPES_EVENT()
+                        result = new DecayPipesEvent(h);
                         break;
                     case EnvironmentElementType.PLUSHY:
                         //todo result= new DECAY_PLUSHY_EVENT()
@@ -143,25 +143,25 @@ public class TimeAndEventHandler : MonoBehaviour
                 switch (h.type)
                 {
                     case EnvironmentElementType.POLSTERED:
-                        //todo result= new SPIDER_COUCH_EVENT()
+                        result = new SpiderPolsteredEvent(h);
                         break;
                     case EnvironmentElementType.BOOKSHELF:
-                        //todo result= new SPIDER_BOOKSHELF_EVENT()
+                        result = new SpiderBookshelfEvent(h);
                         break;
                     case EnvironmentElementType.DOOR:
-                        //todo result= new SPIDER_DOOR_EVENT()
+                        result = new SpiderDoorEvent(h);
                         break;
                     case EnvironmentElementType.FRIDGE:
-                        //todo result= new SPIDER_FRIDGE_EVENT()
+                        result = new SpiderFridgeEvent(h);
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
-                        //todo result= new SPIDER_LIGHTSWITCH_EVENT()
+                        result = new SpiderLightswitchEvent(h);
                         break;
                     case EnvironmentElementType.MIRROR:
-                        //todo result= new SPIDER_MIRROR_EVENT()
+                        result = new SpiderMirrorEvent(h);
                         break;
                     case EnvironmentElementType.PIPES:
-                        //todo result= new SPIDER_PIPES_EVENT()
+                        result = new SpiderPipesEvent(h);
                         break;
                     case EnvironmentElementType.PLUSHY:
                         //todo result= new SPIDER_PLUSHY_EVENT()
@@ -175,16 +175,16 @@ public class TimeAndEventHandler : MonoBehaviour
                         //todo result= new RAT_COUCH_EVENT()
                         break;
                     case EnvironmentElementType.BOOKSHELF:
-                        //todo result= new RAT_BOOKSHELF_EVENT()
+                        result = new RatBookshelfEvent(h);
                         break;
                     case EnvironmentElementType.DOOR:
-                        //todo result= new RAT_DOOR_EVENT()
+                        result = new RatDoorEvent(h);
                         break;
                     case EnvironmentElementType.FRIDGE:
                         //todo result= new RAT_FRIDGE_EVENT()
                         break;
                     case EnvironmentElementType.LIGHTSWITCH:
-                        //todo result= new RAT_LIGHTSWITCH_EVENT()
+                        result = new RatLightswitchEvent(h);
                         break;
                     case EnvironmentElementType.MIRROR:
                         //todo result= new RAT_MIRROR_EVENT()
