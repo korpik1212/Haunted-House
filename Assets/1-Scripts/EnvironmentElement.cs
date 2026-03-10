@@ -24,11 +24,6 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     public EnvironmentElementType type;
     
 
-    public void DoSimulationStep()
-    {
-        
-    }
-
     public void setTrap(ScareEvent e)
     {
         Trap = e;
@@ -37,6 +32,16 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     public bool checkTimeSlotAvailability()
     {
      return Trap != null;
+    }
+
+    public bool hasTrap()
+    {
+        return Trap != null;
+    }
+
+    public ScareEvent GetTrap()
+    {
+        return Trap;
     }
 
 
