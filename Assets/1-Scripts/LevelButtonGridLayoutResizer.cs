@@ -23,16 +23,14 @@ public class LevelButtonGridLayoutResizer : MonoBehaviour
     private void resizeElements()
     {
         levelGrid.cellSize = new Vector2(levelButtonSize.x, levelButtonSize.y+levelNameDefaultOffset);
-        levelGrid.transform.localPosition = new Vector2(levelGrid.transform.localPosition.x + borderOffset,
-            levelGrid.transform.localPosition.y + borderOffset);
+        levelGrid.transform.localPosition = new Vector2(borderOffset,borderOffset);
     }
 
     private bool areElementsUnalligned()
     {
         if (
             !levelGrid.cellSize.Equals(new Vector2(levelButtonSize.x, levelButtonSize.y+levelNameDefaultOffset))||
-            !levelGrid.transform.localPosition.Equals(new Vector2(levelGrid.transform.localPosition.x + borderOffset,
-                levelGrid.transform.localPosition.y + borderOffset))
+            !levelGrid.transform.localPosition.Equals(new Vector2(borderOffset,borderOffset))
         )
         {
             return true;
