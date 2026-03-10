@@ -1,13 +1,20 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using NUnit.Framework;
 
 public class Room : MonoBehaviour
 {
 
-    public ArrayList EnvironmentElements = new ArrayList();
+    private List<EnvironmentElement> EnvironmentElements = new List<EnvironmentElement>();
+    public List<RoomConnection> Pathways;
 
 
+    public List<EnvironmentElement> getEnvironmentElements()
+    {
+        return EnvironmentElements;
+    }
 
     private void gatherRoomElements()
     {
