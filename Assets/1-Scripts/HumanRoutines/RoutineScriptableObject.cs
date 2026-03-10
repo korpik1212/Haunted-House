@@ -19,8 +19,6 @@ public class RoutineScriptableObject : ScriptableObject
         
     }
     
-    public 
-    
     public RoutineAction getRoutineAction(int index) => RoutineActions[index];
     
 }
