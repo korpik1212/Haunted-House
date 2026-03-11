@@ -1,7 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
-using UnityEditor.MemoryProfiler;
 
 
 public class House : MonoBehaviour
