@@ -33,11 +33,6 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     {
         Trap = e;
     }
-    
-    public bool checkTimeSlotAvailability()
-    {
-     return Trap != null;
-    }
 
     public bool hasTrap()
     {
