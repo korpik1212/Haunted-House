@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 2270121866413512802, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_BoneTransforms.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2270121866413512802, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: 'm_BoneTransforms.Array.data[1]'
