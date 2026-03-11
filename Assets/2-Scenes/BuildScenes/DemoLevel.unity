@@ -4516,6 +4516,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[0].cap
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[1].cap
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[2].cap
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[0].scareType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[1].ScareType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[2].ScareType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: fearValues.Array.data[2].scareType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

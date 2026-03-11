@@ -7,18 +7,20 @@ public class Human : MonoBehaviour
 {
 
     public List<RoutineSchmevent> routine;
-    
+    public List<HumanFearValue> fearValues;
+
     private Room currentRoom;
     public Room startingRoom;
-    
     public Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
     public Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
+    private static int DEFAULT_FEAR_LEVEL_CAP = 10;
     
     public void Start()
     {
         
         currentRoom = startingRoom;
         transform.position = currentRoom.transform.position;
+        setupFearCaps();
 
     }
 
@@ -27,7 +29,24 @@ public class Human : MonoBehaviour
         Debug.Log("Awake");
         setupRoutine();
     }
-    
+
+    public void setupFearCaps()
+    {
+        
+        foreach (ScareType scareType in Enum.GetValues(typeof(ScareType)))
+        {
+            currentFearLevels.TryAdd(scareType, 0);
+            foreach (HumanFearValue humanFearValue in fearValues)
+            {
+                if (humanFearValue.scareType == scareType)
+                {
+                    fearLevelCaps.TryAdd(scareType, humanFearValue.cap);
+                }
+            }
+            fearLevelCaps.TryAdd(scareType, DEFAULT_FEAR_LEVEL_CAP);
+        }
+    }
+
     public void setupRoutine()
     {
         Debug.Log("setupRoutine");
@@ -63,8 +82,12 @@ public class Human : MonoBehaviour
     {
         foreach (KeyValuePair<ScareType, int> scare in scaresSuffered)
         {
-            currentFearLevels[scare.Key] += scare.Value;
-            Debug.Log("I, " + name + ", have suffered " + scare.Value + " " + scare.Key + " and am now at " + currentFearLevels[scare.Key] + " " + scare.Key);
+            if (currentFearLevels.ContainsKey(scare.Key))
+            {
+                currentFearLevels[scare.Key] += scare.Value;
+                Debug.Log("I, " + name + ", have suffered " + scare.Value + " " + scare.Key + " and am now at " + currentFearLevels[scare.Key] + " " + scare.Key);
+            }
+            
         }
     }
     

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -5,24 +6,20 @@ public class CardHolder : MonoBehaviour
 {
     public List<Card> cards = new List<Card>();
 
-    public static CardHolder instance;
 
-
-
-    private void Awake()
+    public void Start()
     {
-        if (instance == null)
+        GameManager.getInstance().cardHolder = this;
+    }
+    
+    public void SetupCards()
+    {
+        foreach(Card cardPrefab in GameManager.getInstance().house.avaibleCards)
         {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
+            Card card = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity,transform);
+            cards.Add(card);
         }
     }
-
-
 
     public void RemoveCardFromHand(Card card)
     {

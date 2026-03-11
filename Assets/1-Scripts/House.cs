@@ -15,7 +15,7 @@ public class House : MonoBehaviour
         rooms = getAllRooms();
         humans = getAllHumans();
         TimeAndEventHandler.getInstance().house = this;
-        GameManager.getInstance().startingHousePrefab = this;
+        GameManager.getInstance().house = this;
     }
 
     // Update is called once per frame
