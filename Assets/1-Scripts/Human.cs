@@ -133,6 +133,10 @@ public class Human : MonoBehaviour
 
     public float getFearRatio(ScareType scareType)
     {
+        if (!currentFearLevels.ContainsKey(scareType) || !fearLevelCaps.ContainsKey(scareType))
+        {
+            return 0f;
+        }
         return  (float)currentFearLevels[scareType] / (float)fearLevelCaps[scareType];
     }
 }

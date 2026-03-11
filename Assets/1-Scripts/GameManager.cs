@@ -8,7 +8,8 @@ public class GameManager
 
     public CardHolder cardHolder;
     public House house;
-
+    public GameStateManager gameStateManager;
+    
     public bool IsPlayerInputAllowed = true;
     
 

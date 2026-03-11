@@ -9,24 +9,25 @@ public class DemoLevelManager : GameStateManager
     {
         win.AddListener(doWin);
         lose.AddListener(doLose);
-        winConditions.Add(dadIsScared());   
+        winConditions.Add(dadIsScared);
+        Debug.Log(winConditions.Count);
     }
 
     private void doWin()
     {
-        SceneManager.LoadScene("2-Scenes/BuildScenes/WinScreen");
+        SceneManager.LoadSceneAsync("2-Scenes/BuildScenes/WinScreen");
     }
 
     private void doLose()
     {
-        SceneManager.LoadScene("2-Scenes/BuildScenes/LoseScreen");
+        SceneManager.LoadSceneAsync("2-Scenes/BuildScenes/LoseScreen");
     }
     
     #region demolevel win condition functions
 
     private bool dadIsScared()
     {
-        if (dad.getFearRatio(ScareType.SHOCK) > 1.0)
+        if ( dad.getFearRatio(ScareType.SHOCK) >= 1.0)
         {
             return true;
         }
@@ -37,9 +38,9 @@ public class DemoLevelManager : GameStateManager
     
     public override bool winConditionsFulfilled()
     {
-        foreach (bool b in winConditions)
+        foreach (Func<bool> b in winConditions)
         {
-            if (b) return true;
+            return b.Invoke();
         }
         return false;
     }
