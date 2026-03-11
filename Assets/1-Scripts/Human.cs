@@ -107,6 +107,9 @@ public class Human : MonoBehaviour
     }
 
     public Room getCurrentRoom() => currentRoom;
-    
-    public float getFearRatio()
+
+    public float getFearRatio(ScareType scareType)
+    {
+        return  (float)currentFearLevels[scareType] / (float)fearLevelCaps[scareType];
+    }
 }
