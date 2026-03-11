@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public House startingHousePrefab;
 
 
-    public static GameManager instance;
+    private static GameManager instance;
 
     public CardHolder cardHolder;
 
@@ -16,24 +16,27 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
+        
     }
 
+    public static GameManager getInstance()
+    {
+        if (instance == null)
+        {
+            instance = new GameManager();
+        }
+        
+        return instance;
 
+    }
+    
     private void Start()
     {
         StartCoroutine(GameLoop());
     }
 
 
-    House createdHouse = null;
+    House createdHouse;
     public void SetupHouse()
     {
 
