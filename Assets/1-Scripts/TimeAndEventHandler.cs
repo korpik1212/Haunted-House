@@ -75,9 +75,13 @@ public class TimeAndEventHandler
         {
             ScareSchmevent schmeventToAdd = getScareEvent(scareCard, host);
 
-            if (host.checkTimeSlotAvailability())
+            if (!host.hasTrap())
             {
                 host.setTrap(schmeventToAdd);
+            }
+            else
+            {
+                Debug.Log("Environment Element already has a set trap");
             }
         }
     }

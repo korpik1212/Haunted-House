@@ -55,10 +55,11 @@ public class PlayerActionsManager : MonoBehaviour
 
         }
         
-        if (Mouse.current.leftButton.wasPressedThisFrame && objectUnderMouse != null)
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             ProcessClick(objectUnderMouse, worldPosition);
         }
+        
 
         if (currentlySelectedCard != null)
         {
@@ -69,9 +70,7 @@ public class PlayerActionsManager : MonoBehaviour
             currentlySelectedCard.transform.position = new Vector3(Pointer.current.position.ReadValue().x,Pointer.current.position.ReadValue().y, 0f);
             if (InputSystem.actions["RightClick"].WasPressedThisFrame())
             {
-                currentlySelectedCard.transform.parent = GameObject.Find("CardHolder").transform;
-                currentlySelectedCard.isSelected = false;
-                currentlySelectedCard = null;
+                releaseCard();
             }
         }
     }
@@ -152,18 +151,47 @@ public class PlayerActionsManager : MonoBehaviour
 
     private void ProcessClick(GameObject clickedObject, Vector2 worldPosition)
     {
+        
+        if (clickedObject == null)
+        {
+            releaseCard();
+            return;
+            
+        }
+        
        Debug.Log("Clicked on: " + clickedObject.name);
         ICardTargetable targetable = clickedObject.GetComponentInParent<ICardTargetable>();
         if (targetable != null && currentlySelectedCard != null)
         {
           
             targetable.OnTargetClick(currentlySelectedCard);
-            GameManager.getInstance().cardHolder.RemoveCardFromHand(currentlySelectedCard);
-            currentlySelectedCard = null;
+            if (targetable is EnvironmentElement)
+            {
+                if ((targetable as EnvironmentElement).hasTrap() == false)
+                {
+                    GameManager.getInstance().cardHolder.RemoveCardFromHand(currentlySelectedCard);
+                    releaseCard();
+                }
+                else
+                {
+                   releaseCard();
+                }
+            }
+            
         }
     }
 
    
+    public void releaseCard()
+    {
+        if (currentlySelectedCard != null)
+        {
+            currentlySelectedCard.transform.parent = GameObject.Find("CardHolder").transform;
+            currentlySelectedCard.isSelected = false;
+            currentlySelectedCard = null;
+        }
+    }
+    
 }
 public interface IHoverable
 {
