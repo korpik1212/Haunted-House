@@ -3,30 +3,24 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-
-public enum Fear
-{
-    Disgust,
-    Shock,
-    Paranoia
-}
-
 public class Human : MonoBehaviour
 {
 
     public List<RoutineSchmevent> routine;
-    
+    public List<HumanFearValue> fearValues;
+
     private Room currentRoom;
     public Room startingRoom;
-    
-    Dictionary<Fear, int> fearLevelCaps = new Dictionary<Fear, int>();
-    Dictionary<Fear, int> currentFearLevels = new Dictionary<Fear, int>();
+    public Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
+    public Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
+    private static int DEFAULT_FEAR_LEVEL_CAP = 10;
     
     public void Start()
     {
         
         currentRoom = startingRoom;
         transform.position = currentRoom.transform.position;
+        setupFearCaps();
 
     }
 
@@ -35,7 +29,24 @@ public class Human : MonoBehaviour
         Debug.Log("Awake");
         setupRoutine();
     }
-    
+
+    public void setupFearCaps()
+    {
+        
+        foreach (ScareType scareType in Enum.GetValues(typeof(ScareType)))
+        {
+            currentFearLevels.TryAdd(scareType, 0);
+            foreach (HumanFearValue humanFearValue in fearValues)
+            {
+                if (humanFearValue.scareType == scareType)
+                {
+                    fearLevelCaps.TryAdd(scareType, humanFearValue.cap);
+                }
+            }
+            fearLevelCaps.TryAdd(scareType, DEFAULT_FEAR_LEVEL_CAP);
+        }
+    }
+
     public void setupRoutine()
     {
         Debug.Log("setupRoutine");
@@ -51,11 +62,11 @@ public class Human : MonoBehaviour
     
     private void checkFears()
     {
-        foreach (Fear fear in fearLevelCaps.Keys)
+        foreach (ScareType scareType in fearLevelCaps.Keys)
         {
-            if (currentFearLevels[fear] >= fearLevelCaps[fear])
+            if (currentFearLevels[scareType] >= fearLevelCaps[scareType])
             {
-                Debug.Log("I, "  + name + ", have reached my " + fear + " fear level cap and am now incapacitated");
+                Debug.Log("I, "  + name + ", have reached my " + scareType + " fear level cap and am now incapacitated");
             }
         }
     }
@@ -64,22 +75,23 @@ public class Human : MonoBehaviour
     {
                     
         var scaresSuffered = t.spook(this);
+        sufferScares(scaresSuffered);
+    } 
+    
+    private void sufferScares(Dictionary<ScareType, int> scaresSuffered)
+    {
         foreach (KeyValuePair<ScareType, int> scare in scaresSuffered)
         {
-            switch (scare.Key)
+            if (currentFearLevels.ContainsKey(scare.Key))
             {
-                case ScareType.DISGUST:
-                    currentFearLevels[Fear.Disgust] += scare.Value;
-                    break;
-                case ScareType.PARANOIA:
-                    currentFearLevels[Fear.Paranoia] += scare.Value;
-                    break;
-                case ScareType.SHOCK:
-                    currentFearLevels[Fear.Shock] += scare.Value;
-                    break;
+                currentFearLevels[scare.Key] += scare.Value;
+                Debug.Log("I, " + name + ", have suffered " + scare.Value + " " + scare.Key + " and am now at " + currentFearLevels[scare.Key] + " " + scare.Key);
             }
+            
         }
-    } 
+    }
+    
+    
 
     public void moveToRoom(Room room)
     {
@@ -118,4 +130,9 @@ public class Human : MonoBehaviour
     }
 
     public Room getCurrentRoom() => currentRoom;
+
+    public float getFearRatio(ScareType scareType)
+    {
+        return  (float)currentFearLevels[scareType] / (float)fearLevelCaps[scareType];
+    }
 }

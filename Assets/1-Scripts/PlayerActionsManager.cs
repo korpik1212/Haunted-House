@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using System;
+using Object = System.Object;
 
 public class PlayerActionsManager : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class PlayerActionsManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.IsPlayerInputAllowed == false) return;
+        if (GameManager.getInstance().IsPlayerInputAllowed == false) return;
         if (Mouse.current == null)
         {
             return;
@@ -45,9 +46,33 @@ public class PlayerActionsManager : MonoBehaviour
 
         UpdateHoverState(objectUnderMouse);
 
+        
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            GameObject obj = GetTopMostObject(worldPosition);
+            Debug.unityLogger.Log("Clicked on:" + obj);
+            
+
+        }
+        
         if (Mouse.current.leftButton.wasPressedThisFrame && objectUnderMouse != null)
         {
             ProcessClick(objectUnderMouse, worldPosition);
+        }
+
+        if (currentlySelectedCard != null)
+        {
+            if(currentlySelectedCard.transform.parent == GameObject.Find("CardHolder").transform)
+            {
+                currentlySelectedCard.transform.SetParent(this.transform);
+            }
+            currentlySelectedCard.transform.position = new Vector3(Pointer.current.position.ReadValue().x,Pointer.current.position.ReadValue().y, 0f);
+            if (InputSystem.actions["RightClick"].WasPressedThisFrame())
+            {
+                currentlySelectedCard.transform.parent = GameObject.Find("CardHolder").transform;
+                currentlySelectedCard.isSelected = false;
+                currentlySelectedCard = null;
+            }
         }
     }
 
@@ -133,7 +158,7 @@ public class PlayerActionsManager : MonoBehaviour
         {
           
             targetable.OnTargetClick(currentlySelectedCard);
-            CardHolder.instance.RemoveCardFromHand(currentlySelectedCard);
+            GameManager.getInstance().cardHolder.RemoveCardFromHand(currentlySelectedCard);
             currentlySelectedCard = null;
         }
     }
