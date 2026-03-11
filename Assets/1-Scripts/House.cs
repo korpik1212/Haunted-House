@@ -12,9 +12,10 @@ public class House : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        TimeAndEventHandler.getInstance().house = this;
         rooms = getAllRooms();
         humans = getAllHumans();
+        TimeAndEventHandler.getInstance().house = this;
+        GameManager.getInstance().startingHousePrefab = this;
     }
 
     // Update is called once per frame

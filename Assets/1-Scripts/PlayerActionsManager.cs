@@ -32,7 +32,7 @@ public class PlayerActionsManager : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.IsPlayerInputAllowed == false) return;
+        if (GameManager.getInstance().IsPlayerInputAllowed == false) return;
         if (Mouse.current == null)
         {
             return;

@@ -1,14 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-public class GameManager : MonoBehaviour
+public class GameManager 
 {
   
     public UnityEvent OnHouseCleared;
     public House startingHousePrefab;
 
 
-    public static GameManager instance;
+    private static GameManager instance;
 
     public CardHolder cardHolder;
 
@@ -16,24 +16,24 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            instance = this;
-        }
+        
     }
 
-
-    private void Start()
+    public static GameManager getInstance()
     {
-        StartCoroutine(GameLoop());
+        if (instance == null)
+        {
+            instance = new GameManager();
+        }
+        
+        return instance;
+
     }
+    
 
 
-    House createdHouse = null;
+
+    House createdHouse;
     public void SetupHouse()
     {
 

@@ -54,7 +54,7 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
     private void Update()
     {
-        if(GameManager.instance.IsPlayerInputAllowed == false)
+        if(GameManager.getInstance().IsPlayerInputAllowed == false)
         {
             return;
         }
