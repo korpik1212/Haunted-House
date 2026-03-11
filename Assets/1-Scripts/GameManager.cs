@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-public class GameManager : MonoBehaviour
+public class GameManager 
 {
   
     public UnityEvent OnHouseCleared;
@@ -30,10 +30,7 @@ public class GameManager : MonoBehaviour
 
     }
     
-    private void Start()
-    {
-        StartCoroutine(GameLoop());
-    }
+
 
 
     House createdHouse;
