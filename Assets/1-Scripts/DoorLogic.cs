@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class DoorLogic : MonoBehaviour
+public class Door : MonoBehaviour
 {
+    
     public Room roomA;
     public Room roomB;
+    public bool isLocked = false;
 }
