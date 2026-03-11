@@ -31,7 +31,8 @@ public class TimeAndEventHandler
     {
         Debug.Log("Advanced Time");
         currentTime += increment;
-        doRoutines();   
+        doRoutines();
+        GameManager.getInstance().gameStateManager.updateGameState();
     }
 
     public void doRoutines()
