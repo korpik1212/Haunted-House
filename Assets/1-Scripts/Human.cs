@@ -11,8 +11,8 @@ public class Human : MonoBehaviour
     private Room currentRoom;
     public Room startingRoom;
     
-    Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
-    Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
+    public Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
+    public Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
     
     public void Start()
     {
@@ -107,4 +107,6 @@ public class Human : MonoBehaviour
     }
 
     public Room getCurrentRoom() => currentRoom;
+    
+    public float getFearRatio()
 }
