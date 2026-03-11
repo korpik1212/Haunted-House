@@ -8,8 +8,8 @@ public class Room : MonoBehaviour
 {
 
     private List<EnvironmentElement> EnvironmentElements = new List<EnvironmentElement>();
-    public List<RoomConnection> Pathways;
-
+    public List<Door> doors = new List<Door>();
+    public House house;
 
     public List<EnvironmentElement> getEnvironmentElements()
     {
@@ -38,11 +38,11 @@ public class Room : MonoBehaviour
 
     public void LockConnectionTo(Room room)
     {
-        foreach (RoomConnection roomConnection in Pathways)
+        foreach (Door door in doors)
         {
-            if (roomConnection.goesToRoom() == room)
+            if (door.roomA == room || door.roomB == room)
             {
-                roomConnection.IsLocked = true;
+                door.isLocked = true;
                 Debug.Log("Locked connection from " + name + " to " + room.name);
             }
         }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEditor.MemoryProfiler;
 
 
 public class House : MonoBehaviour
@@ -8,6 +9,7 @@ public class House : MonoBehaviour
     public List<Card> avaibleCards;
     public List<Room> rooms;
     public List<Human> humans;
+    public List<Door> doors;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,6 +37,7 @@ public class House : MonoBehaviour
             if (room != null)
             {
                 rooms.Add(room);
+                room.house = this;
             }
         }
         return rooms;
