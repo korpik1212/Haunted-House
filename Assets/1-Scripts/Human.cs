@@ -95,9 +95,9 @@ public class Human : MonoBehaviour
 
     public void moveToRoom(Room room)
     {
-        foreach (RoomConnection roomConnection in currentRoom.Pathways)
+        foreach (Door door in currentRoom.doors)
         {
-            if (roomConnection.goesToRoom() == room && !roomConnection.IsLocked)
+            if (!door.isLocked && (door.roomA == room || door.roomB == room))
             {
                 Debug.Log("Moving from " + currentRoom.name + " to " + room.name);
                 transform.position = room.transform.position;
@@ -107,7 +107,7 @@ public class Human : MonoBehaviour
                 return;
             }
             
-            if (roomConnection.goesToRoom() == room && roomConnection.IsLocked)
+            if ((door.roomA == room || door.roomB == room) && door.isLocked)
             {
                 Debug.Log("I, " + name + ", cannot move from " + currentRoom.name + " to " + room.name + " because the door is locked");
                 return;
