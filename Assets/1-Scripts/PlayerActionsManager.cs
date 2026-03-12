@@ -45,15 +45,7 @@ public class PlayerActionsManager : MonoBehaviour
         GameObject objectUnderMouse = GetTopMostObject(worldPosition);
 
         UpdateHoverState(objectUnderMouse);
-
         
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            GameObject obj = GetTopMostObject(worldPosition);
-            Debug.unityLogger.Log("Clicked on:" + obj);
-            
-
-        }
         
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -63,10 +55,6 @@ public class PlayerActionsManager : MonoBehaviour
 
         if (currentlySelectedCard != null)
         {
-            if(currentlySelectedCard.transform.parent == GameObject.Find("CardHolder").transform)
-            {
-                currentlySelectedCard.transform.SetParent(this.transform);
-            }
             currentlySelectedCard.transform.position = new Vector3(Pointer.current.position.ReadValue().x,Pointer.current.position.ReadValue().y, 0f);
             if (InputSystem.actions["RightClick"].WasPressedThisFrame())
             {
@@ -154,28 +142,30 @@ public class PlayerActionsManager : MonoBehaviour
         
         if (clickedObject == null)
         {
-            releaseCard();
             return;
-            
         }
         
        Debug.Log("Clicked on: " + clickedObject.name);
         ICardTargetable targetable = clickedObject.GetComponentInParent<ICardTargetable>();
         if (targetable != null && currentlySelectedCard != null)
         {
-          
-            targetable.OnTargetClick(currentlySelectedCard);
+            
             if (targetable is EnvironmentElement)
             {
-                if ((targetable as EnvironmentElement).hasTrap() == false)
+                EnvironmentElement environmentElement = targetable as EnvironmentElement;
+                
+                if (environmentElement.hasTrap() == false)
                 {
-                    GameManager.getInstance().cardHolder.RemoveCardFromHand(currentlySelectedCard);
-                    releaseCard();
+                    targetable.OnTargetClick(currentlySelectedCard);
+                    //check if the trap was successfully set, if so remove the card from the hand
+                    if (environmentElement.hasTrap()) {
+                        GameManager.getInstance().cardHolder.RemoveCardFromHand(currentlySelectedCard);
+                    }
+                    
                 }
-                else
-                {
-                   releaseCard();
-                }
+               
+                releaseCard();
+                
             }
             
         }
@@ -186,7 +176,7 @@ public class PlayerActionsManager : MonoBehaviour
     {
         if (currentlySelectedCard != null)
         {
-            currentlySelectedCard.transform.parent = GameObject.Find("CardHolder").transform;
+            currentlySelectedCard.transform.SetParent(GameManager.getInstance().cardHolder.transform);
             currentlySelectedCard.isSelected = false;
             currentlySelectedCard = null;
         }
