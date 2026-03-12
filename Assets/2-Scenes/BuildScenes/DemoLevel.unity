@@ -979,6 +979,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280025780}
   m_CullTransparentMesh: 1
+--- !u!114 &326550492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6422375562891553923, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+  m_PrefabInstance: {fileID: 1614464295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
 --- !u!1 &346977240
 GameObject:
   m_ObjectHideFlags: 0
@@ -5589,17 +5600,85 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1614464298}
     - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
       propertyPath: fearValues.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[0].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[1].startTimeHour
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[2].startTimeHour
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[3].startTimeHour
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
       propertyPath: routine.Array.data[0].destinationRoom
       value: 
-      objectReference: {fileID: 1614464297}
+      objectReference: {fileID: 924302960}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[0].durationInTicks
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
       propertyPath: routine.Array.data[1].destinationRoom
       value: 
+      objectReference: {fileID: 1614464297}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[1].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[1].startTimeMinute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[2].destinationRoom
+      value: 
       objectReference: {fileID: 1614464298}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[2].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[2].startTimeMinute
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[3].destinationRoom
+      value: 
+      objectReference: {fileID: 326550492}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[3].durationInTicks
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[3].startTimeMinute
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[4].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464298}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[4].durationInTicks
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: routine.Array.data[4].startTimeMinute
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
