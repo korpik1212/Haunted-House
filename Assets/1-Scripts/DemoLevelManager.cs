@@ -31,7 +31,7 @@ public class DemoLevelManager : GameStateManager
         {
             return true;
         }
-        else return false;
+        return false;
     }
     
     #endregion
