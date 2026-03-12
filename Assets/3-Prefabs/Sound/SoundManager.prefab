@@ -45,9 +45,201 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Soundtrack_DaySong
+    clip: {fileID: 8300000, guid: ed82f8e3fe4654ec688ae631ad447d6d, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 1
+    source: {fileID: 0}
+  - name: Soundtrack_NightSong
+    clip: {fileID: 8300000, guid: 69cd972f5c06644258b2b9ca7bc32d51, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 1
+    source: {fileID: 0}
+  - name: Soundtrack_Bell
+    clip: {fileID: 8300000, guid: d81619889b7e5463c9c2e6310e8ae2c4, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: UI_Sounds_Click
+    clip: {fileID: 8300000, guid: c46f960ca0c814d128283af674457c77, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: UI_Sounds_Puff
+    clip: {fileID: 8300000, guid: 114eb1eef3d544b10a26e3a7627da866, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Card_Sounds_Rat
+    clip: {fileID: 8300000, guid: 1440430d84b45476384a04d8e8666086, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Card_Sounds_Spiders
+    clip: {fileID: 8300000, guid: 8c956b8df292c47caa50429bb9aed3a9, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Card_Sounds_Supernatrual
+    clip: {fileID: 8300000, guid: a05fd5c964f8a48f996c8f5c805bcf88, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Card_Sounds_Decay
+    clip: {fileID: 8300000, guid: 495da13ec3ac5428a9ec0296bfe165d1, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Card_Sounds_Costume
+    clip: {fileID: 8300000, guid: 3a736db24d679460c9f3271ddd53b94c, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Dad_Sounds_Talk
+    clip: {fileID: 8300000, guid: 6f46e0c933c7a44f6b66da5dcf9012b1, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Dad_Sounds_Happy
+    clip: {fileID: 8300000, guid: 3ec1bcc803ae74a0daf9d00dd26b5d81, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Dad_Sounds_NotScared
+    clip: {fileID: 8300000, guid: 6fc88b0f159814383b30b72691e3319a, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Dad_Sounds_Scared
+    clip: {fileID: 8300000, guid: 23c6630891edd408fa9634c02d70a9fa, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Dad_Sounds_VeryScared
+    clip: {fileID: 8300000, guid: de874680e64d2462ea6b7bfde66d3707, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Mum_Sounds_Talk
+    clip: {fileID: 8300000, guid: 23c6630891edd408fa9634c02d70a9fa, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Mum_Sounds_Happy
+    clip: {fileID: 8300000, guid: 3988ab6d53a1b4e0d9888cfe81fa0988, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Mum_Sounds_NotScared
+    clip: {fileID: 8300000, guid: 307b4ecd1e086453dbb348543c8a6168, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Mum_Sounds_Scared
+    clip: {fileID: 8300000, guid: 36a9df1c08d914d91acab46781d42b99, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Mum_Sounds_VeryScared
+    clip: {fileID: 8300000, guid: 281e00a5ca4a94e4a8431e52e6242d8b, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Son_Sounds_Talk
+    clip: {fileID: 8300000, guid: 4bffaff9cedc546e2a226f6c6437bcb6, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Son_Sounds_NotScared
+    clip: {fileID: 8300000, guid: c147513688346491981b322cbc74f612, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Son_Sounds_Scared
+    clip: {fileID: 8300000, guid: 26c0fc0e1541a49cfb36bc5eff1f873c, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Son_Sounds_VeryScared
+    clip: {fileID: 8300000, guid: ae97bfd2e0e08451c8bdc108d0e96d97, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Daughter_Sounds_Talk
+    clip: {fileID: 8300000, guid: f7d0508e819604e4cad1a77f80697357, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Daughter_Sounds_Happy
+    clip: {fileID: 8300000, guid: 1e72671a759154ffb8d857e64806d447, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Daughter_Sounds_NotScared
+    clip: {fileID: 8300000, guid: 4a69b2f8252824eaf8fbc6b83e5f7ba6, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Daughter_Sounds_Scared
+    clip: {fileID: 8300000, guid: 44c00e2b4df084ea0b43d6f2a33803dc, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Daughter_Sounds_VeryScared
+    clip: {fileID: 8300000, guid: ad6c09cb7b6d349f49cbc14becc4b719, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Grandma_Sounds_Talk
+    clip: {fileID: 8300000, guid: 70dab3865b69449a09d90b7507321e3c, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Grandma_Sounds_NotScared
+    clip: {fileID: 8300000, guid: 3cec6578bd86646558a03a2597664e96, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Grandma_Sounds_Scared
+    clip: {fileID: 8300000, guid: 6cbdd5b8d9ad24a61a712c71bf2a0417, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Grandma_Sounds_VeryScared
+    clip: {fileID: 8300000, guid: 1f3260ef9da924487930b1f1efaf9f48, type: 3}
+    volume: 1
+    pitch: 1.5
     loop: 0
     source: {fileID: 0}
