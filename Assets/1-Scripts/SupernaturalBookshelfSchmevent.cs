@@ -5,6 +5,7 @@ public class SupernaturalBookshelfSchmevent : ScareSchmevent
 {
     public SupernaturalBookshelfSchmevent(EnvironmentElement h) : base(h)
     {
+        eventSprite = Resources.Load<Sprite>("Cards/Supernatural");
     }
 
     public override Dictionary<ScareType, int> spook(Human human)

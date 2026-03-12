@@ -97,7 +97,7 @@ public class TimeAndEventHandler
             }
             else
             {
-                Debug.Log("Environment Element already has a set trap");
+                Debug.Log("Environment Element already has a set trap " + schmeventToAdd.GetType().Name);
             }
         }
     }
@@ -234,7 +234,7 @@ public class TimeAndEventHandler
     {
         public TestSchmevent(EnvironmentElement h, ScareCard c) : base(h)
         {
-
+            eventSprite = Resources.Load<Sprite>("Icons/settingsbutton");
         }
 
         public override Dictionary<ScareType, int> spook(Human human)
