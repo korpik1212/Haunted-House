@@ -7,12 +7,14 @@ public class TimeAndEventHandler
 {
 
     private static TimeAndEventHandler instance;
-    public DateTime currentTime;
+    private DateTime currentTime;
+    public int startOfNightHour = 22;
+    public DateTime initialStartTime = new DateTime(2026, 1, 1, 6, 0, 0);
     public static TimeSpan default_increment = TimeSpan.FromMinutes(10);
     public House house;
     private void setupInstance()
     {
-        currentTime = new DateTime(2026, 1, 1, 0, 0, 0);
+        currentTime = initialStartTime;
     }
 
     public static TimeAndEventHandler getInstance()
@@ -26,12 +28,27 @@ public class TimeAndEventHandler
         return instance;
         
     }
-
-    public void advanceTime()
+    
+    public DateTime getCurrentTime()
     {
+        return currentTime;
+    }
+
+    public void hardSetCurrentTime(DateTime time)
+    {
+        currentTime = time;
+    }
+
+    public void advanceTime(TimeSpan increment)
+    {
+        // Debug.Log("Advanced Time");
         currentTime += increment;
         doRoutines();
         GameManager.getInstance().gameStateManager.updateGameState();
+    }
+    public void advanceTime()
+    {
+        advanceTime(default_increment);
     }
 
     public void doRoutines()
