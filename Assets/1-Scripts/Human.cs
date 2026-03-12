@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Human : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Human : MonoBehaviour
 
     private Room currentRoom;
     public Room startingRoom;
+    public TMPro.TextMeshProUGUI bubol;
     public Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
     public Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
     private static int DEFAULT_FEAR_LEVEL_CAP = 100;
@@ -85,6 +87,17 @@ public class Human : MonoBehaviour
             if (currentFearLevels.ContainsKey(scare.Key))
             {
                 currentFearLevels[scare.Key] += scare.Value;
+                if (fearLevelCaps[scare.Key]/scare.Value >= 0.7)
+                {
+                    bubol.text = GameObject.Find("TalkingHat").GetComponent<TalkingHat>().getVeryScaredQuote(this);
+                } else if (fearLevelCaps[scare.Key] / scare.Value >= 0.4)
+                {
+                    bubol.text = GameObject.Find("TalkingHat").GetComponent<TalkingHat>().getScaredQuote(this);
+                }
+                else
+                {
+                    bubol.text = GameObject.Find("TalkingHat").GetComponent<TalkingHat>().getNotScaredQuote(this);
+                }
                 Debug.Log("I, " + name + ", have suffered " + scare.Value + " " + scare.Key + " and am now at " + currentFearLevels[scare.Key] + " " + scare.Key);
             }
             
