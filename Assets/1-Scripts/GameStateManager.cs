@@ -8,7 +8,7 @@ public abstract class GameStateManager : MonoBehaviour
 {
     public int maxNights;
     public List<Func<bool>> winConditions = new List<Func<bool>>();
-    private int currentNight;
+    private int currentNight = 0;
     public UnityEvent win;
     public UnityEvent lose;
     
