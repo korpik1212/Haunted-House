@@ -29,7 +29,6 @@ public class TimeAndEventHandler
 
     public void advanceTime()
     {
-        Debug.Log("Advanced Time");
         currentTime += increment;
         doRoutines();
         GameManager.getInstance().gameStateManager.updateGameState();
@@ -37,10 +36,10 @@ public class TimeAndEventHandler
 
     public void doRoutines()
     {
-        Debug.Log("Do Routines");
+        // Debug.Log("Do Routines");
         foreach (Human human in house.humans)
         {
-            Debug.Log("Human " + human.name + " is " + human.getCurrentRoom());
+            // Debug.Log("Human " + human.name + " is " + human.getCurrentRoom());
             foreach (RoutineSchmevent routineEvent in human.routine)
             {
                 if (routineEvent.getStartTime().Equals(currentTime))
