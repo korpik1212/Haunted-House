@@ -8897,9 +8897,9 @@ Transform:
   - {fileID: 1215746151}
   - {fileID: 856778839}
   - {fileID: 1741070379}
+  - {fileID: 2414671025760692672}
   - {fileID: 721358580}
   - {fileID: 2312576405974923660}
-  - {fileID: 2414671025760692672}
   - {fileID: 817949430684396312}
   - {fileID: 5299020742253200199}
   - {fileID: 5987716766727335074}
@@ -9679,7 +9679,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f984f0683d87bd43b57d6ac2bc9b47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Human
-  routine: []
+  routine:
+  - startTimeHour: 22
+    startTimeMinute: 0
+    durationInTicks: 6
+    destinationRoom: {fileID: 6422375564504869284}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 23
+    startTimeMinute: 0
+    durationInTicks: 1
+    destinationRoom: {fileID: 7536521724285663533}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 23
+    startTimeMinute: 10
+    durationInTicks: 1
+    destinationRoom: {fileID: 2096005895304902202}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 23
+    startTimeMinute: 20
+    durationInTicks: 1
+    destinationRoom: {fileID: 1518104344931565138}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 23
+    startTimeMinute: 30
+    durationInTicks: 1
+    destinationRoom: {fileID: 715950565789561683}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 23
+    startTimeMinute: 40
+    durationInTicks: 1
+    destinationRoom: {fileID: 1832574955141240509}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 23
+    startTimeMinute: 50
+    durationInTicks: 28
+    destinationRoom: {fileID: 4998668073758316492}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 4
+    startTimeMinute: 30
+    durationInTicks: 1
+    destinationRoom: {fileID: 1832574955141240509}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 4
+    startTimeMinute: 40
+    durationInTicks: 1
+    destinationRoom: {fileID: 715950565789561683}
+    additionalEffect: {fileID: 0}
+  - startTimeHour: 4
+    startTimeMinute: 50
+    durationInTicks: 7
+    destinationRoom: {fileID: 715950565789561683}
+    additionalEffect: {fileID: 0}
   fearValues: []
   startingRoom: {fileID: 4998668073758316492}
   bubol: {fileID: 4418563364214913974}
