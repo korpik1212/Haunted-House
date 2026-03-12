@@ -29,6 +29,7 @@ public class PauseBehaviour : MonoBehaviour
         continueButton.SetActive(true);
         menuButton.SetActive(true);
         pauseMenuPanel.enabled = true;
+        Time.timeScale = 0;
     }
 
     public void ContinueButtonOnClick()
@@ -38,6 +39,7 @@ public class PauseBehaviour : MonoBehaviour
         continueButton.SetActive(false);
         menuButton.SetActive(false);
         pauseMenuPanel.enabled = false;
+        Time.timeScale = 1;
     }
 
     public void MenuButtonOnClick()
