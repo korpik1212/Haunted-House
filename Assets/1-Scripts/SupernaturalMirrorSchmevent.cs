@@ -12,7 +12,8 @@ public class SupernaturalMirrorSchmevent : ScareSchmevent
         Debug.Log("Supernatural Mirror Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.PARANOIA,60);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSuper");
         return result;
     }
 }

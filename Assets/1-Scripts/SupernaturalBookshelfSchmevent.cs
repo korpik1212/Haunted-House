@@ -12,7 +12,8 @@ public class SupernaturalBookshelfSchmevent : ScareSchmevent
         Debug.Log("Supernatural Bookshelf Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.PARANOIA,50);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSuper");
         return result;
     }
 }

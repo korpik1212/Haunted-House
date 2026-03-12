@@ -12,7 +12,8 @@ public class DecayPolsteredSchmevent : ScareSchmevent
         Debug.Log("Decay Polstered Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.DISGUST,10);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventDecay");
         return result;
     }
 }
