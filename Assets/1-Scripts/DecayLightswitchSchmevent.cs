@@ -5,7 +5,7 @@ public class DecayLightswitchSchmevent : ScareSchmevent
 {
     public DecayLightswitchSchmevent(EnvironmentElement h) : base(h)
     {
-        eventSprite = Resources.Load<Sprite>("Cards/Decay");
+        eventSprite = Resources.Load<Sprite>("EffectSprites/event_decay2");
     }
 
     public override Dictionary<ScareType, int> spook(Human human)

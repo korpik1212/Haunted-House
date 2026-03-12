@@ -5,7 +5,7 @@ public class SupernaturalMirrorSchmevent : ScareSchmevent
 {
     public SupernaturalMirrorSchmevent(EnvironmentElement h) : base(h)
     {
-        eventSprite = Resources.Load<Sprite>("Cards/Supernatural");
+        eventSprite = Resources.Load<Sprite>("EffectSprites/event_hallu");
     }
 
     public override Dictionary<ScareType, int> spook(Human human)

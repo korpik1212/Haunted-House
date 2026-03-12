@@ -234,7 +234,7 @@ public class TimeAndEventHandler
     {
         public TestSchmevent(EnvironmentElement h, ScareCard c) : base(h)
         {
-            eventSprite = Resources.Load<Sprite>("Icons/settingsbutton");
+            eventSprite = Resources.Load<Sprite>("EffectSprites/LoseScreenPlaceHolder");
         }
 
         public override Dictionary<ScareType, int> spook(Human human)

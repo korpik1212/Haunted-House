@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public abstract class GameStateManager : MonoBehaviour
 {
-    public int maxNights;
+    public int maxNights = 5;
     public List<Func<bool>> winConditions = new List<Func<bool>>();
     private int currentNight = 0;
     public UnityEvent win;

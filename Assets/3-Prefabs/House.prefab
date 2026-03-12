@@ -1580,6 +1580,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sofa
       objectReference: {fileID: 0}
+    - target: {fileID: 7549771259527642174, guid: b9b76401a53f67249a96771552f2c88f, type: 3}
+      propertyPath: m_Size.x
+      value: 19.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549771259527642174, guid: b9b76401a53f67249a96771552f2c88f, type: 3}
+      propertyPath: m_Size.y
+      value: 14.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549771259527642174, guid: b9b76401a53f67249a96771552f2c88f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549771259527642174, guid: b9b76401a53f67249a96771552f2c88f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
