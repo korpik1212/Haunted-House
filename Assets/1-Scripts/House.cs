@@ -17,12 +17,7 @@ public class House : MonoBehaviour
         TimeAndEventHandler.getInstance().house = this;
         GameManager.getInstance().house = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     
     private List<Room> getAllRooms()
     {
