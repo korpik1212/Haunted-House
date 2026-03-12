@@ -44,7 +44,6 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     {
         SetupCardData(CardFactory.instance.GetCardData(this));
         
-
     }
 
     public void SetupCardData(CardScriptableObject cardData)
@@ -65,6 +64,11 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
             {
                 OnSelected();
             }
+            if (InputSystem.actions["RightClick"].WasPressedThisFrame())
+            {
+                OnDeselected();
+            }
+            
         }
 
         if (isSelected)
@@ -101,26 +105,29 @@ public class Card : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     {
         isSelected = true;
         PlayerActionsManager.instance.SelectCard(this);
+        Debug.Log("Selected card " + gameObject.name);
 
     }
 
     public void OnDeselected()
     {
         isSelected = false;
+        PlayerActionsManager.instance.releaseCard();
+
     }
 
   
     public void OnPointerEnter(PointerEventData eventData)
     {
         // transform.DOScale(startingSize * 1.2f, 0.2f);
-        Debug.Log("pointer entered");
+        // Debug.Log("pointer entered");
         isHovering = true;
 
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("pointer exited");
+        // Debug.Log("pointer exited");
 
         // transform.DOScale(startingSize, 0.2f);
         isHovering = false;

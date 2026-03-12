@@ -45,6 +45,11 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     }
 
 
+    public bool canAcceptThisTrap(ScareCard trapType)
+    {
+        return true;
+    }
+
     public void OnTargetHoverEnter(Card card)
     {
 

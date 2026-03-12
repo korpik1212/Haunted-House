@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487ebcb5ac4899e488c2213745214841, type: 3}
-  m_Name: Spider
+  m_Name: Supernatural
   m_EditorClassIdentifier: Assembly-CSharp::CardScriptableObject
-  sprite: {fileID: -1369553723357631760, guid: de36d7a7238e297438ac9b8f52790c5c, type: 3}
-  cardName: Spider
-  cardDescription: Summon Spiders type shit
+  sprite: {fileID: -1172507750846015636, guid: ffbbfb5c918daef4984a0321b06c1372, type: 3}
+  cardName: Suoernatural
+  cardDescription: Go to Super Hell

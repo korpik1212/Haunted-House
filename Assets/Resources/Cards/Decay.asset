@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 487ebcb5ac4899e488c2213745214841, type: 3}
-  m_Name: EnviormentalGhost
+  m_Name: Decay
   m_EditorClassIdentifier: Assembly-CSharp::CardScriptableObject
-  sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  cardName: Spider
-  cardDescription: Summon Spiders type shit
+  sprite: {fileID: 7240837396394005573, guid: 9a1f7e2e20cd9214aa9bcfd6ad2410db, type: 3}
+  cardName: Decay
+  cardDescription: An Extant Form Of Life

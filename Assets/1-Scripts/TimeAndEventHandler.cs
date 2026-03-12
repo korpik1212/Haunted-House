@@ -223,10 +223,10 @@ public class TimeAndEventHandler
 
         public override Dictionary<ScareType, int> spook(Human human)
         {
-
-            Debug.Log("hello");
-
-            return null;
+            Debug.Log("This is just a Test, it doesn't actually scare you");
+            Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
+            //todo animate event
+            return result;
         }
     }
 }
