@@ -16,7 +16,6 @@ public enum EnvironmentElementType
     PLUSHY
 }
 
-
 [System.Serializable]
 public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
 {

@@ -53,6 +53,7 @@ MonoBehaviour:
   doors:
   - {fileID: 4913006978521762064}
   - {fileID: 742124573903059463}
+  - {fileID: 5403959404681887475}
   house: {fileID: 0}
 --- !u!222 &5396082298550547206
 CanvasRenderer:
@@ -359,7 +360,6 @@ MonoBehaviour:
   doors:
   - {fileID: 6757936513819229197}
   - {fileID: 4913006978521762064}
-  - {fileID: 5403959404681887475}
   house: {fileID: 0}
 --- !u!222 &7796842122541651631
 CanvasRenderer:
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   doors:
   - {fileID: 5403959404681887475}
-  - {fileID: 5403959404681887475}
+  - {fileID: 6355631412152130182}
   house: {fileID: 0}
 --- !u!222 &7991063367880026523
 CanvasRenderer:
@@ -1756,7 +1756,7 @@ PrefabInstance:
     - target: {fileID: 15738421887846614, guid: b5ecf18d2faa4744a850583274131265, type: 3}
       propertyPath: roomA
       value: 
-      objectReference: {fileID: 1518104344395103093}
+      objectReference: {fileID: 715950567399798388}
     - target: {fileID: 15738421887846614, guid: b5ecf18d2faa4744a850583274131265, type: 3}
       propertyPath: roomB
       value: 
@@ -1811,7 +1811,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1039217130217651106, guid: b5ecf18d2faa4744a850583274131265, type: 3}
       propertyPath: m_Name
-      value: DoorKitchenBasement
+      value: DoorHallwayLowerBasement
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170750035096445584, guid: b5ecf18d2faa4744a850583274131265, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170750035096445584, guid: b5ecf18d2faa4744a850583274131265, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
