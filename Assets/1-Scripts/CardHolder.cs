@@ -10,6 +10,7 @@ public class CardHolder : MonoBehaviour
     public void Start()
     {
         GameManager.getInstance().cardHolder = this;
+        SetupCards();
     }
     
     public void SetupCards()

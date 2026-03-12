@@ -16,7 +16,6 @@ public enum EnvironmentElementType
     PLUSHY
 }
 
-
 [System.Serializable]
 public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
 {
@@ -44,6 +43,11 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
         return Trap;
     }
 
+
+    public bool canAcceptThisTrap(ScareCard trapType)
+    {
+        return true;
+    }
 
     public void OnTargetHoverEnter(Card card)
     {
