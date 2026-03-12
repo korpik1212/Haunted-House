@@ -6,6 +6,7 @@ public class RatDoorSchmevent : ScareSchmevent
     
     public RatDoorSchmevent(EnvironmentElement h) : base(h)
     {
+        eventSprite = Resources.Load<Sprite>("Cards/Rat");
     }
 
     public override Dictionary<ScareType, int> spook(Human human)

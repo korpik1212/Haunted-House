@@ -7,6 +7,7 @@ namespace _1_Scripts.ScareEvents
     {
         public SupernaturalFridgeSchmevent(EnvironmentElement h) : base(h)
         {
+            eventSprite = Resources.Load<Sprite>("Cards/Supernatural");
         }
 
         public override Dictionary<ScareType, int> spook(Human human)

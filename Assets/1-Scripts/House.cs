@@ -7,7 +7,7 @@ public class House : MonoBehaviour
     public List<Card> avaibleCards;
     public List<Room> rooms;
     public List<Human> humans;
-    public List<Door> doors;
+    //public List<Door> doors;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,12 +17,7 @@ public class House : MonoBehaviour
         TimeAndEventHandler.getInstance().house = this;
         GameManager.getInstance().house = this;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     
     private List<Room> getAllRooms()
     {
