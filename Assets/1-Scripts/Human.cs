@@ -13,7 +13,7 @@ public class Human : MonoBehaviour
     public Room startingRoom;
     public Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
     public Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
-    private static int DEFAULT_FEAR_LEVEL_CAP = 10;
+    private static int DEFAULT_FEAR_LEVEL_CAP = 100;
     
     public void Start()
     {
