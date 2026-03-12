@@ -97,7 +97,7 @@ public class TimeAndEventHandler
             }
             else
             {
-                Debug.Log("Environment Element already has a set trap");
+                Debug.Log("Environment Element already has a set trap " + schmeventToAdd.GetType().Name);
             }
         }
     }

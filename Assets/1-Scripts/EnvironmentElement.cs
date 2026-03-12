@@ -23,7 +23,7 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     // * Events<>
     // * functionality to check time availability and other shit()
 
-    private ScareSchmevent Trap = null;
+    public ScareSchmevent Trap = null;
 
     public EnvironmentElementType type;
 
