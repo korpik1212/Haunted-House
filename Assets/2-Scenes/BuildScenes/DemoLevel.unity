@@ -1682,7 +1682,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f070135ee424b5b4c8f191e95f312da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeDebug
+  nightDurationInMinutes: 480
+  tickSpeedInSeconds: 60
   timeText: {fileID: 265643661}
+  nightsLeftText: {fileID: 0}
 --- !u!1 &650637762
 GameObject:
   m_ObjectHideFlags: 0
@@ -5982,6 +5985,150 @@ PrefabInstance:
       propertyPath: startingRoom
       value: 
       objectReference: {fileID: 1614464298}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[0].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[1].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[2].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[3].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[4].startTimeHour
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[5].startTimeHour
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[6].startTimeHour
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[7].startTimeHour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[8].startTimeHour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[0].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464300}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[0].durationInTicks
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[1].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[1].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[1].startTimeMinute
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[2].destinationRoom
+      value: 
+      objectReference: {fileID: 924302960}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[2].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[2].startTimeMinute
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[3].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464297}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[3].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[3].startTimeMinute
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[4].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464298}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[4].durationInTicks
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[4].startTimeMinute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[5].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464297}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[5].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[5].startTimeMinute
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[6].destinationRoom
+      value: 
+      objectReference: {fileID: 924302960}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[6].durationInTicks
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[6].startTimeMinute
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[7].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464297}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[7].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[7].startTimeMinute
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[8].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464298}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[8].durationInTicks
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035538039343597463, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
+      propertyPath: routine.Array.data[8].startTimeMinute
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1774829336328936174, guid: 1be8e53102d73ca469ed9cad1cafc73c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.19773707
