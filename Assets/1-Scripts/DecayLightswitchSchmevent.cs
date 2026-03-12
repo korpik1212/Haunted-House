@@ -12,7 +12,8 @@ public class DecayLightswitchSchmevent : ScareSchmevent
         Debug.Log("Decay Lightswitch Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.SHOCK, 40);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventDecay");
         return result;
     }
 }

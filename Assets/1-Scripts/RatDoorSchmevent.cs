@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class RatDoorSchmevent : ScareSchmevent
 {
+    
     public RatDoorSchmevent(EnvironmentElement h) : base(h)
     {
     }
@@ -12,7 +13,8 @@ public class RatDoorSchmevent : ScareSchmevent
         Debug.Log("Rat Bookshelf Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.SHOCK,10);
-        //todo animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventRat");
+
         return result;
     }
 }
