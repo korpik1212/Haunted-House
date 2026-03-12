@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   sounds:
-  - name: 
-    clip: {fileID: 0}
+  - name: tertteet
+    clip: {fileID: 8300000, guid: 043041126acda704ab597410a0cf3385, type: 3}
     volume: 0
     pitch: 0
     loop: 0
