@@ -52,6 +52,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stairway_front
       objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.17364825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9848078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958593988592065035, guid: 187fa0992f63f7b4ab15adb8e12b67c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 160
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

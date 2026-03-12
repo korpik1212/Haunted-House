@@ -56,7 +56,7 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
 
     public void OnHoverEnter()
     {
-        Debug.Log("hovering");
+        // Debug.Log("hovering");
     }
 
     public void OnTargetHoverExit(Card card)
