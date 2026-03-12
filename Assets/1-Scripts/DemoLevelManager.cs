@@ -27,7 +27,7 @@ public class DemoLevelManager : GameStateManager
 
     private bool dadIsScared()
     {
-        if ( dad.getFearRatio(ScareType.SHOCK) >= 1.0)
+        if ( dad.getFearRatio(ScareType.SHOCK) > 0.0 || dad.getFearRatio(ScareType.PARANOIA) > 0.0 || dad.getFearRatio(ScareType.DISGUST) > 0.0)
         {
             return true;
         }
