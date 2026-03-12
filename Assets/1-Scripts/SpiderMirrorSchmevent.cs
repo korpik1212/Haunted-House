@@ -15,6 +15,8 @@ public class SpiderMirrorSchmevent : ScareSchmevent
         result.Add(ScareType.DISGUST,50);
         // animate event
         getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSpider");
+        // sound
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("Card_Sounds_Spiders");
         return result;
     }
 }

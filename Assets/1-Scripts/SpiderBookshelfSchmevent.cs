@@ -14,6 +14,8 @@ public class SpiderBookshelfSchmevent : ScareSchmevent
         result.Add(ScareType.SHOCK,20);
         // animate event
         getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSpider");
+        // sound
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("Card_Sounds_Spiders");
         return result;
     }
 }

@@ -14,6 +14,8 @@ public class SupernaturalMirrorSchmevent : ScareSchmevent
         result.Add(ScareType.PARANOIA,60);
         // animate event
         getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSuper");
+        // sound
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("Card_Sounds_Supernatrual");
         return result;
     }
 }

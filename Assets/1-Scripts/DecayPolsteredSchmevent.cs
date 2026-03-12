@@ -14,6 +14,8 @@ public class DecayPolsteredSchmevent : ScareSchmevent
         result.Add(ScareType.DISGUST,10);
         // animate event
         getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventDecay");
+        // sound
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("Card_Sounds_Decay");
         return result;
     }
 }

@@ -6,14 +6,20 @@ public class NavigationButtonLogic : MonoBehaviour
     public static void returnToMainMenu()
     {
         SceneManager.LoadSceneAsync("MainMenu");
+
+        FindObjectOfType<SoundManager>().Play("UI_Sounds_Click");
     }
     public static void enterLevelSelection()
     {
         SceneManager.LoadSceneAsync("LevelSelect");
+
+        FindObjectOfType<SoundManager>().Play("UI_Sounds_Click");
     }
     public static void enterSettingsMenu()
     {
         SceneManager.LoadSceneAsync("Settings");
+
+        FindObjectOfType<SoundManager>().Play("UI_Sounds_Click");
     }
 
     public static void exitGame()
