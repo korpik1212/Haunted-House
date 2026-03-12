@@ -2084,6 +2084,50 @@ PrefabInstance:
       propertyPath: startingRoom
       value: 
       objectReference: {fileID: 1614464300}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[0].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].startTimeHour
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[0].destinationRoom
+      value: 
+      objectReference: {fileID: 924302958}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[0].durationInTicks
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].startTimeMinute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[2].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464300}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[2].durationInTicks
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[2].startTimeMinute
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7600036759438204696, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
       propertyPath: m_Name
       value: Son
