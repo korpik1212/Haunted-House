@@ -1643,7 +1643,7 @@ GameObject:
   - component: {fileID: 644153079}
   - component: {fileID: 644153080}
   m_Layer: 5
-  m_Name: TimeDebug
+  m_Name: TimeController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2084,6 +2084,50 @@ PrefabInstance:
       propertyPath: startingRoom
       value: 
       objectReference: {fileID: 1614464300}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[0].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].startTimeHour
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[0].destinationRoom
+      value: 
+      objectReference: {fileID: 924302958}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[0].durationInTicks
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[1].startTimeMinute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[2].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464300}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[2].durationInTicks
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 870211861079712516, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
+      propertyPath: routine.Array.data[2].startTimeMinute
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7600036759438204696, guid: 56dc7f7beae4cac46b5796a2b061803a, type: 3}
       propertyPath: m_Name
       value: Son
@@ -2236,6 +2280,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870329383}
   m_CullTransparentMesh: 1
+--- !u!114 &924302958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1832574954600813466, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+  m_PrefabInstance: {fileID: 1614464295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
+--- !u!114 &924302959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 715950567399798388, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+  m_PrefabInstance: {fileID: 1614464295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
+--- !u!114 &924302960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1518104344395103093, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+  m_PrefabInstance: {fileID: 1614464295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e70b9b3445c8ad44ba1c8d56692831c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Room
 --- !u!1 &935906173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,6 +3033,146 @@ PrefabInstance:
       propertyPath: startingRoom
       value: 
       objectReference: {fileID: 1614464300}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[0].startTimeHour
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[1].startTimeHour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[2].startTimeHour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[3].startTimeHour
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[4].startTimeHour
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[5].startTimeHour
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[6].startTimeHour
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[7].startTimeHour
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[8].startTimeHour
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[0].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464300}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[0].durationInTicks
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[1].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[1].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[2].destinationRoom
+      value: 
+      objectReference: {fileID: 924302958}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[2].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[2].startTimeMinute
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[3].destinationRoom
+      value: 
+      objectReference: {fileID: 1614464299}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[3].durationInTicks
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[3].startTimeMinute
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[4].destinationRoom
+      value: 
+      objectReference: {fileID: 924302958}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[4].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[4].startTimeMinute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[5].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[5].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[5].startTimeMinute
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[6].destinationRoom
+      value: 
+      objectReference: {fileID: 924302960}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[6].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[6].startTimeMinute
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[7].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[7].durationInTicks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[7].startTimeMinute
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[8].destinationRoom
+      value: 
+      objectReference: {fileID: 924302959}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[8].durationInTicks
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575413650742258680, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
+      propertyPath: routine.Array.data[8].startTimeMinute
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 4453218535287899217, guid: 2978b193e9ae6264fac76f6ea38947ba, type: 3}
       propertyPath: m_Name
       value: Daughter
@@ -3631,7 +3848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time++
+  m_text: Start Night
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4304,6 +4521,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 721358581}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].human
+      value: 
+      objectReference: {fileID: 721358581}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[0].quotes.Array.size
       value: 14
       objectReference: {fileID: 0}
@@ -4313,15 +4534,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.size
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.size
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.size
-      value: 0
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.size
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[0].quotes.Array.data[0].type
@@ -4445,7 +4670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[3].type
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[4].type
@@ -4473,7 +4698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[1].type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[2].type
@@ -4505,6 +4730,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[9].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[1].type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[2].type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[3].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[4].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[5].type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[6].type
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
@@ -4623,7 +4872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[0].quote
-      value: '*snores*'
+      value: '*ugh*...just kill me already'
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[10].type
@@ -4643,45 +4892,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[1].quote
-      value: This ain't real...
+      value: '...um...hello? '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[2].quote
-      value: NOPE *runs away*
+      value: Please, I don't wanna die! I just say it for attention!
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[3].quote
-      value: You call it family, I call it psych ward.
+      value: Pina, once you old enough we can play games together!
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[4].quote
-      value: The only thing my husband fears is me....and everything else nature
-        has to offer.
+      value: I would rather die then eat mums food...
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[5].quote
-      value: The only thing my husband fears is me....and everything else nature
-        has to offer.
+      value: 'This stain on the wall looks kind of sus... '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[6].quote
-      value: I'm so glad my mum  lives with us. I'm really a train-wreck of a mother...
+      value: There is no god, only stupid man.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[7].quote
-      value: I can't go to the basement...its for...uh...losers.
+      value: I wonder if dad would die, if I put a spider in his sheets? Worth a
+        try after he paid collage.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[8].quote
-      value: I'll leave the light on honey.
+      value: 'I should pierce my bottom lip just to give granny a little heartattack
+        here and now. '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[9].quote
-      value: Without grandma the house would look like a junkyard.
+      value: 'You call it family, I call it hetero-normative propaganda. '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[0].quote
-      value: '*snores*'
+      value: '*laughs* Hello little you!'
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[10].type
@@ -4701,44 +4950,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[1].quote
-      value: This ain't real...
+      value: ...ganma?
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[2].quote
-      value: NOPE *runs away*
+      value: 'Go away! *cries* '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[3].quote
-      value: NOPE *runs away*
+      value: I love everything that's nice to me.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[4].quote
-      value: The only thing my husband fears is me....and everything else nature
-        has to offer.
+      value: 'The world is so yummy. '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[5].quote
-      value: Pina, stop eating the curtains!
+      value: 'Look out, there could be monsters in the closet... '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[6].quote
-      value: I'm so glad my mum  lives with us. I'm really a train-wreck of a mother...
+      value: 'Mom locked away my clown costume because grandma didn''t liked it...but
+        she said to keep it secret! '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[7].quote
-      value: I can't go to the basement...its for...uh...losers.
+      value: 'I want to play hide and seek, but only in teams! '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[8].quote
-      value: I'll leave the light on honey.
+      value: Mommy hates scary movies. She says they're for stupid teenagers like
+        Maxi.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[9].quote
-      value: Without grandma the house would look like a junkyard.
+      value: I'm gonna be the princess of mud when I'm big! But dad and grandma wouldn't
+        visit me in my mud castle...How sad.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[0].quote
-      value: '*snores*'
+      value: 'Now look at that. I better clean it up before somone notices. '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[10].type
@@ -4758,40 +5009,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[1].quote
-      value: '*snores*'
+      value: You don't treat an oldie like that
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[2].quote
-      value: NOPE *runs away*
+      value: 'Kreuzsackelzement & heilix Blechle!!! '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[3].quote
-      value: You call it family, I call it psych ward.
+      value: My daughter is lucky she got a husband without any womenly skills to
+        her.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[4].quote
-      value: The only thing my husband fears is me....and everything else nature
-        has to offer.
+      value: Maxi looks like a corpse already, how is he supposed to get a girl like
+        this?
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[5].quote
-      value: Pina, stop eating the curtains!
+      value: There's an explanation for everything Pina, don't you worry.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[6].quote
-      value: I'm so glad my mum  lives with us. I'm really a train-wreck of a mother...
+      value: Let me clean that up, before somone notices.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[7].quote
-      value: I can't go to the basement...its for...uh...losers.
+      value: The only two things a woman has to fear is dieing alone and smelling
+        like poop.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[8].quote
-      value: I'll leave the light on honey.
+      value: Gosh, some day my little Pina will die by eating rat poisening or drinking
+        gasoline.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[9].quote
-      value: Without grandma the house would look like a junkyard.
+      value: When Keira was still young she was a lot like her daughter. Heads always
+        in cotton-candy clouds...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[0].quote
+      value: 'Now look at that. I better clean it up before somone notices. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[1].quote
+      value: You don't treat an oldie like that
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[2].quote
+      value: 'Kreuzsackelzement & heilix Blechle!!! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[3].quote
+      value: My daughter is lucky she got a husband without any womenly skills to
+        her.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[4].quote
+      value: Maxi looks like a corpse already, how is he supposed to get a girl like
+        this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[5].quote
+      value: There's an explanation for everything Pina, don't you worry.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
+      propertyPath: familyQuotes.Array.data[5].quotes.Array.data[6].quote
+      value: Let me clean that up, before somone notices.
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[0].quotes.Array.data[10].quote
@@ -4831,18 +5116,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[10].quote
-      value: ' I''m so glad my mum  lives with us. I''m really a train-wreck of a
-        mother...'
+      value: Gross, I have to bath in sanitizer now!
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[11].quote
-      value: Next summer I'll go camping in australia with Pina and leave mom and
-        the boys at fancy hotel.
+      value: 'Is that a rat?! Oh...just a shadow..right? '
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[12].quote
-      value: As a child I wasn't allowed to dress up as a clown, guess what I made
-        for Pina last halloween...
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[2].quotes.Array.data[13].quote
@@ -4851,13 +5133,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[10].quote
-      value: ' I''m so glad my mum  lives with us. I''m really a train-wreck of a
-        mother...'
+      value: Grandma has the best hugs!
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[11].quote
-      value: Next summer I'll go camping in australia with Pina and leave mom and
-        the boys at fancy hotel.
+      value: Grandma gives the best hugs!
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[3].quotes.Array.data[12].quote
@@ -4871,8 +5151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[10].quote
-      value: ' I''m so glad my mum  lives with us. I''m really a train-wreck of a
-        mother...'
+      value: Who took care of this place? Its so dusty everywhere...
       objectReference: {fileID: 0}
     - target: {fileID: 3174599172288881742, guid: cab2dd872cefa1481861715bb4d51f5f, type: 3}
       propertyPath: familyQuotes.Array.data[4].quotes.Array.data[11].quote

@@ -8,7 +8,7 @@ public abstract class GameStateManager : MonoBehaviour
 {
     public int maxNights;
     public List<Func<bool>> winConditions = new List<Func<bool>>();
-    private int currentNight;
+    private int currentNight = 0;
     public UnityEvent win;
     public UnityEvent lose;
     
@@ -19,18 +19,23 @@ public abstract class GameStateManager : MonoBehaviour
     }
     public void Update()
     {
-        currentNight = (TimeAndEventHandler.getInstance().currentTime - new DateTime(2026, 01, 01)).Days;
+        currentNight = (TimeAndEventHandler.getInstance().getCurrentTime() - new DateTime(2026, 01, 01)).Days;
     }
     
     public void updateGameState()
     {
-        if (currentNight >= maxNights)
+        if (TimeAndEventHandler.getInstance().getCurrentTime() >= TimeAndEventHandler.getInstance().initialStartTime.AddDays(maxNights))
         {
             lose.Invoke();
         } else if (winConditionsFulfilled())
         {
             win.Invoke();
         }
+    }
+
+    public int getCurrentNight()
+    {
+        return currentNight;
     }
     
     public abstract bool winConditionsFulfilled();

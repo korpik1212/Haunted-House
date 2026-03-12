@@ -394,7 +394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f984f0683d87bd43b57d6ac2bc9b47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Human
-  routine: []
+  routine:
+  - startTimeHour: 0
+    startTimeMinute: 0
+    durationInTicks: 0
+    destinationRoom: {fileID: 0}
+    additionalEffect: {fileID: 0}
   fearValues: []
   startingRoom: {fileID: 0}
   bubol: {fileID: 1277049132213371666}
