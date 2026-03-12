@@ -12,7 +12,8 @@ public class SpiderDoorSchmevent : ScareSchmevent
         Debug.Log("Spider Door Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.SHOCK,20);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSpider");
         return result;
     }
 }

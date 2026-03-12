@@ -13,7 +13,8 @@ public class SpiderFridgeSchmevent : ScareSchmevent
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.SHOCK,20);
         result.Add(ScareType.DISGUST,50);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventSpider");
         return result;
     }
 }

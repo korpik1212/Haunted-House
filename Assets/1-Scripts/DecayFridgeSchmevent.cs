@@ -12,7 +12,8 @@ public class DecayFridgeSchmevent : ScareSchmevent
         Debug.Log("Decay Fridge Event triggered");
         Dictionary<ScareType, int> result= new Dictionary<ScareType, int>();
         result.Add(ScareType.DISGUST,50);
-        //todo animate event
+        // animate event
+        getHost().gameObject.transform.GetComponent<Animator>().SetTrigger("eventDecay");
         return result;
     }
 }
