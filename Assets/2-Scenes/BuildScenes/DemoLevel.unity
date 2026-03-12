@@ -929,7 +929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8e925a1d37dd745a7a41e9b9a4b0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  CardType: 0
+  CardType: 3
   startingSize: {x: 0, y: 0, z: 0}
   isHovering: 0
   isSelected: 0
@@ -1178,7 +1178,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardFactory
   cardDatas:
+  - {fileID: 11400000, guid: 1ebc5fb94acf82fe9aea7528742106a8, type: 2}
   - {fileID: 11400000, guid: 74a7db8fa539c5f45a23f36001a52bed, type: 2}
+  - {fileID: 11400000, guid: a73443047e870484993320832b535a93, type: 2}
+  - {fileID: 11400000, guid: 989eda5375b5dd102a3056a59f86e528, type: 2}
 --- !u!1 &426444841
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,7 +2916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8e925a1d37dd745a7a41e9b9a4b0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  CardType: 0
+  CardType: 2
   startingSize: {x: 0, y: 0, z: 0}
   isHovering: 0
   isSelected: 0
@@ -3179,7 +3182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b8e925a1d37dd745a7a41e9b9a4b0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  CardType: 0
+  CardType: 1
   startingSize: {x: 0, y: 0, z: 0}
   isHovering: 0
   isSelected: 0
