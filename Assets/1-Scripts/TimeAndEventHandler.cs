@@ -8,7 +8,7 @@ public class TimeAndEventHandler
 
     private static TimeAndEventHandler instance;
     public DateTime currentTime;
-    public TimeSpan increment = TimeSpan.FromMinutes(10);
+    public static TimeSpan default_increment = TimeSpan.FromMinutes(10);
     public House house;
     private void setupInstance()
     {
