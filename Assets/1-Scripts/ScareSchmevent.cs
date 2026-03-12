@@ -17,6 +17,7 @@ public enum ScareType
 public abstract class ScareSchmevent : Schmevent
 {
     private EnvironmentElement hostObject;
+    public Sprite eventSprite;
     public ScareSchmevent(EnvironmentElement h)
     {
         hostObject = h;

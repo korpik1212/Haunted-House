@@ -26,11 +26,14 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     private ScareSchmevent Trap = null;
 
     public EnvironmentElementType type;
+
+    public SpriteRenderer trapSpriteHolder;
     
 
     public void setTrap(ScareSchmevent e)
     {
         Trap = e;
+        trapSpriteHolder.sprite = e.eventSprite;
     }
 
     public bool hasTrap()
