@@ -150,3 +150,6 @@ MonoBehaviour:
   fearValues: []
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
+  veryScaredSound: Grandma_Sounds_VeryScared
+  slightlyScaredSound: Grandma_Sounds_Scared
+  notScaredSound: Grandma_Sounds_NotScared

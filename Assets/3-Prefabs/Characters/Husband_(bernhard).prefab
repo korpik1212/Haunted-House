@@ -227,6 +227,9 @@ MonoBehaviour:
   fearValues: []
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
+  veryScaredSound: Dad_Sounds_VeryScared
+  slightlyScaredSound: Dad_Sounds_Scared
+  notScaredSound: Dad_Sounds_NotScared
 --- !u!95 &1632423865623372668
 Animator:
   serializedVersion: 7
