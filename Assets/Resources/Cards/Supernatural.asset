@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487ebcb5ac4899e488c2213745214841, type: 3}
   m_Name: Supernatural
   m_EditorClassIdentifier: Assembly-CSharp::CardScriptableObject
-  sprite: {fileID: -1172507750846015636, guid: ffbbfb5c918daef4984a0321b06c1372, type: 3}
+  sprite: {fileID: 21300000, guid: 522c5c05a1a6bf74b91f10ac98e86c00, type: 3}
   cardName: Suoernatural
   cardDescription: Go to Super Hell

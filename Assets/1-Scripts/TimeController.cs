@@ -56,6 +56,7 @@ public class TimeController : MonoBehaviour
     {
         
         GameManager.getInstance().house.resetHumans();
+        GameManager.getInstance().house.resetDoors();
         
         DateTime currentTime = TimeAndEventHandler.getInstance().getCurrentTime();
         DateTime startOfNightTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day,

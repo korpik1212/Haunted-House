@@ -316,6 +316,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a7f21ab499f7ce34886251aff8b5c3ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: -0.91
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a7f21ab499f7ce34886251aff8b5c3ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: -4653.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a7f21ab499f7ce34886251aff8b5c3ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.28634
       objectReference: {fileID: 0}
@@ -385,6 +393,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f21ab499f7ce34886251aff8b5c3ee, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6190787858871676762}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7f21ab499f7ce34886251aff8b5c3ee, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7617047561037305373}
   m_SourcePrefab: {fileID: 100100000, guid: a7f21ab499f7ce34886251aff8b5c3ee, type: 3}
 --- !u!4 &5910544439063244601 stripped
 Transform:
@@ -418,3 +429,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7617047561037305373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434984669711054211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb830ab13cf5cb60b90c153404b601df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnvironmentElement
+  type: 4
+  trapSpriteHolder: {fileID: 5280753509538837295, guid: 3097b9a51bfc1db429ab3ef7be45b504, type: 3}
