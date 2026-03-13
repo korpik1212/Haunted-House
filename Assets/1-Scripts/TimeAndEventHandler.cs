@@ -59,7 +59,7 @@ public class TimeAndEventHandler
             // Debug.Log("Human " + human.name + " is " + human.getCurrentRoom());
             foreach (RoutineSchmevent routineEvent in human.routine)
             {
-                if (routineEvent.getStartTime().Equals(currentTime))
+                if (routineEvent.getStartTime().AddDays(GameManager.getInstance().gameStateManager.getCurrentNight()).Equals(currentTime))
                 {
                     PerformRoutineEvent(human, routineEvent);
                 }
