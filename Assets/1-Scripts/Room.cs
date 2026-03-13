@@ -10,6 +10,7 @@ public class Room : MonoBehaviour
     private List<EnvironmentElement> EnvironmentElements = new List<EnvironmentElement>();
     public List<Door> doors = new List<Door>();
     public House house;
+    public GameObject PersonAnchor;
 
     public List<EnvironmentElement> getEnvironmentElements()
     {

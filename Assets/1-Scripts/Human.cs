@@ -120,7 +120,7 @@ public class Human : MonoBehaviour
             if (!door.isLocked && (door.roomA == room || door.roomB == room))
             {
                 Debug.Log("Moving from " + currentRoom.name + " to " + room.name);
-                transform.position = room.transform.position;
+                transform.position = room.PersonAnchor.transform.position;
                 currentRoom = room;
                 checkTraps();
                 checkFears();
@@ -154,7 +154,7 @@ public class Human : MonoBehaviour
     public void HardSetCurrentRoom(Room room)
     {
         currentRoom = room;
-            transform.position = room.transform.position;
+        transform.position = room.PersonAnchor.transform.position;
     }
     
     public void ResetToStartingRoom()
