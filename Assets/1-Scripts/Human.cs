@@ -31,7 +31,7 @@ public class Human : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake");
+        //Debug.Log("Awake");
         setupRoutine();
     }
 
@@ -54,15 +54,15 @@ public class Human : MonoBehaviour
 
     public void setupRoutine()
     {
-        Debug.Log("setupRoutine");
+        //Debug.Log("setupRoutine");
         int i = 0;
         foreach (RoutineSchmevent routineEvent in routine)
         {
             i++;
-            Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);    
+           // Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);    
             routineEvent.SetupRoutineEvent();
         }
-        Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);
+        //Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);
     }
     
     private void checkFears()
