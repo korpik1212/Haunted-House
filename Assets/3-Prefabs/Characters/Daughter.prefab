@@ -153,7 +153,13 @@ MonoBehaviour:
     durationInTicks: 0
     destinationRoom: {fileID: 0}
     additionalEffect: {fileID: 0}
-  fearValues: []
+  fearValues:
+  - scareType: 1
+    cap: 10
+  - scareType: 0
+    cap: 30
+  - scareType: 2
+    cap: 100
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
   veryScaredSound: Daughter_Sounds_VeryScared

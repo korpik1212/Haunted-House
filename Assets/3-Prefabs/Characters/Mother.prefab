@@ -138,7 +138,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Human
   routine: []
-  fearValues: []
+  fearValues:
+  - scareType: 1
+    cap: 10
+  - scareType: 0
+    cap: 60
+  - scareType: 2
+    cap: 90
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
   veryScaredSound: Mum_Sounds_VeryScared
