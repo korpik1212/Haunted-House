@@ -19,5 +19,6 @@ public class RatDoorSchmevent : ScareSchmevent
         GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("Card_Sounds_Rat");
 
         return result;
+        getHost().gameObject.GetComponent<Door>().isLocked = true;
     }
 }
