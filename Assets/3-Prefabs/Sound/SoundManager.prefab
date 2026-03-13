@@ -243,3 +243,21 @@ MonoBehaviour:
     pitch: 1.5
     loop: 0
     source: {fileID: 0}
+  - name: Soundtrack_Startscreen
+    clip: {fileID: 8300000, guid: f3901b77282d44980bf3d68b563b4cd0, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 1
+    source: {fileID: 0}
+  - name: "UI_Sounds_KarteBl\xE4ttern"
+    clip: {fileID: 8300000, guid: 4bc9aa9af275448bd8b38703f0847922, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: "UI_Sounds_KarteGew\xE4hlt"
+    clip: {fileID: 8300000, guid: d3aec09878fa34a139c32cce01b1b68a, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
