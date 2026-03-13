@@ -261,3 +261,15 @@ MonoBehaviour:
     pitch: 1.5
     loop: 0
     source: {fileID: 0}
+  - name: Soundtrack_Looser
+    clip: {fileID: 8300000, guid: c06077d6d61bc405c979035f2298f3b1, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Soundtrack_Winner
+    clip: {fileID: 8300000, guid: e6297aacead584871bf13510264c884d, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
