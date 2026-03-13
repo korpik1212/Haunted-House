@@ -10,7 +10,7 @@ public class DemoLevelManager : GameStateManager
         win.AddListener(doWin);
         lose.AddListener(doLose);
         winConditions.Add(dadIsScared);
-        Debug.Log(winConditions.Count);
+        //Debug.Log(winConditions.Count);
     }
 
     private void doWin()
