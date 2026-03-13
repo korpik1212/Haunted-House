@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeDebug
   nightDurationInMinutes: 480
-  tickSpeedInSeconds: 60
+  tickSpeedInSeconds: 300
   timeText: {fileID: 265643661}
   nightsLeftText: {fileID: 1451914150}
 --- !u!1 &650637762
@@ -3514,6 +3514,22 @@ PrefabInstance:
       propertyPath: bubol
       value: 
       objectReference: {fileID: 3191208877147269975}
+    - target: {fileID: 5327796339781374641, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327796339781374641, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327796339781374641, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327796339781374641, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5816517993777877537, guid: dcd59159b3eecc545bef4425ce8e5480, type: 3}
       propertyPath: bubol
       value: 
