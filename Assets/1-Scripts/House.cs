@@ -51,4 +51,12 @@ public class House : MonoBehaviour
         }
         return humans;
     }
+    
+    public void resetHumans()
+    {
+        foreach (Human human in humans)
+        {
+            human.ResetToStartingRoom();
+        }
+    }
 }

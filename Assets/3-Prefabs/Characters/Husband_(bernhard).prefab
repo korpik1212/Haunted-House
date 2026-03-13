@@ -14,23 +14,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.1977371
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.1977371
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1650.1024
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1002.45734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 717dacdf052048c40aa60618043b247a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -223,10 +223,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f984f0683d87bd43b57d6ac2bc9b47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Human
-  routine: []
-  fearValues: []
+  routine:
+  - startTimeHour: 23
+    startTimeMinute: 0
+    durationInTicks: 1
+    destinationRoom: {fileID: 0}
+    additionalEffect: {fileID: 11400000, guid: 2e98bcbbf705dfc6c86025ffc1526bfc, type: 2}
+  - startTimeHour: 23
+    startTimeMinute: 10
+    durationInTicks: 1
+    destinationRoom: {fileID: 0}
+    additionalEffect: {fileID: 11400000, guid: 2e98bcbbf705dfc6c86025ffc1526bfc, type: 2}
+  - startTimeHour: 23
+    startTimeMinute: 20
+    durationInTicks: 8
+    destinationRoom: {fileID: 0}
+    additionalEffect: {fileID: 11400000, guid: 2e98bcbbf705dfc6c86025ffc1526bfc, type: 2}
+  - startTimeHour: 0
+    startTimeMinute: 40
+    durationInTicks: 32
+    destinationRoom: {fileID: 0}
+    additionalEffect: {fileID: 11400000, guid: 2e98bcbbf705dfc6c86025ffc1526bfc, type: 2}
+  fearValues:
+  - scareType: 1
+    cap: 80
+  - scareType: 0
+    cap: 50
+  - scareType: 2
+    cap: 20
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
+  veryScaredSound: Dad_Sounds_VeryScared
+  slightlyScaredSound: Dad_Sounds_Scared
+  notScaredSound: Dad_Sounds_NotScared
 --- !u!95 &1632423865623372668
 Animator:
   serializedVersion: 7

@@ -16,6 +16,9 @@ public class Human : MonoBehaviour
     public Dictionary<ScareType, int> fearLevelCaps = new Dictionary<ScareType, int>();
     public Dictionary<ScareType, int> currentFearLevels = new Dictionary<ScareType, int>();
     private static int DEFAULT_FEAR_LEVEL_CAP = 100;
+    public String veryScaredSound;
+    public String slightlyScaredSound;
+    public String notScaredSound;
     
     public void Start()
     {
@@ -28,7 +31,7 @@ public class Human : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake");
+        //Debug.Log("Awake");
         setupRoutine();
     }
 
@@ -51,15 +54,15 @@ public class Human : MonoBehaviour
 
     public void setupRoutine()
     {
-        Debug.Log("setupRoutine");
+        //Debug.Log("setupRoutine");
         int i = 0;
         foreach (RoutineSchmevent routineEvent in routine)
         {
             i++;
-            Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);    
+           // Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);    
             routineEvent.SetupRoutineEvent();
         }
-        Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);
+        //Debug.Log("Routine called: " + i+ "Routines found: " + routine.Count);
     }
     
     private void checkFears()
@@ -69,6 +72,7 @@ public class Human : MonoBehaviour
             if (currentFearLevels[scareType] >= fearLevelCaps[scareType])
             {
                 Debug.Log("I, "  + name + ", have reached my " + scareType + " fear level cap and am now incapacitated");
+                
             }
         }
     }
@@ -90,13 +94,16 @@ public class Human : MonoBehaviour
                 if (fearLevelCaps[scare.Key]/scare.Value >= 0.7)
                 {
                     bubol.text = GameObject.Find("TalkingHat").GetComponent<TalkingHat>().getVeryScaredQuote(this);
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().Play(veryScaredSound);
                 } else if (fearLevelCaps[scare.Key] / scare.Value >= 0.4)
                 {
                     bubol.text = GameObject.Find("TalkingHat").GetComponent<TalkingHat>().getScaredQuote(this);
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().Play(slightlyScaredSound);
                 }
                 else
                 {
                     bubol.text = GameObject.Find("TalkingHat").GetComponent<TalkingHat>().getNotScaredQuote(this);
+                    GameObject.Find("SoundManager").GetComponent<SoundManager>().Play(notScaredSound);
                 }
                 Debug.Log("I, " + name + ", have suffered " + scare.Value + " " + scare.Key + " and am now at " + currentFearLevels[scare.Key] + " " + scare.Key);
             }
@@ -143,6 +150,17 @@ public class Human : MonoBehaviour
     }
 
     public Room getCurrentRoom() => currentRoom;
+
+    public void HardSetCurrentRoom(Room room)
+    {
+        currentRoom = room;
+            transform.position = room.transform.position;
+    }
+    
+    public void ResetToStartingRoom()
+    {
+        HardSetCurrentRoom(startingRoom);
+    }
 
     public float getFearRatio(ScareType scareType)
     {
