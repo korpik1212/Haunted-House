@@ -69,6 +69,14 @@ PrefabInstance:
       value: Wall 3.5x6
       objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 9cc09173f6214ed43895a4fa3c1a78b3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0682999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 9cc09173f6214ed43895a4fa3c1a78b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2798
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 9cc09173f6214ed43895a4fa3c1a78b3, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
