@@ -59,4 +59,15 @@ public class House : MonoBehaviour
             human.ResetToStartingRoom();
         }
     }
+    
+    public void resetDoors()
+    {
+        foreach (Room room in rooms)
+        {
+            foreach (Door door in room.doors)
+            {
+                door.isLocked = false;
+            }
+        }
+    }
 }
