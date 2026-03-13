@@ -54,6 +54,9 @@ public class TimeController : MonoBehaviour
 
     public void startMovingThroughNight()
     {
+        
+        GameManager.getInstance().house.resetHumans();
+        
         DateTime currentTime = TimeAndEventHandler.getInstance().getCurrentTime();
         DateTime startOfNightTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day,
             TimeAndEventHandler.getInstance().startOfNightHour, 0, 0, 0);

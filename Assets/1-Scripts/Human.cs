@@ -151,6 +151,17 @@ public class Human : MonoBehaviour
 
     public Room getCurrentRoom() => currentRoom;
 
+    public void HardSetCurrentRoom(Room room)
+    {
+        currentRoom = room;
+            transform.position = room.transform.position;
+    }
+    
+    public void ResetToStartingRoom()
+    {
+        HardSetCurrentRoom(startingRoom);
+    }
+
     public float getFearRatio(ScareType scareType)
     {
         if (!currentFearLevels.ContainsKey(scareType) || !fearLevelCaps.ContainsKey(scareType))
