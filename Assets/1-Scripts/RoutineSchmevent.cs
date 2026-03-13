@@ -19,7 +19,7 @@ public class RoutineSchmevent : Schmevent
     {
         startTime = new DateTime(2026, 1, 1, startTimeHour, startTimeMinute, 0);
         duration = TimeSpan.FromMinutes(durationInTicks*TimeAndEventHandler.default_increment.Minutes);
-        Debug.Log("Setting up routine event. Duration: " + duration+" Start time: "+startTime);
+        //Debug.Log("Setting up routine event. Duration: " + duration+" Start time: "+startTime);
     }
     
 

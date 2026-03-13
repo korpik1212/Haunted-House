@@ -14,23 +14,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.1977371
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.1977371
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1447.635
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1228.8677
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6430878481603615894, guid: 1b1f6a2b53f65474fb2148930634b284, type: 3}
       propertyPath: m_Sprite
@@ -147,7 +147,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Human
   routine: []
-  fearValues: []
+  fearValues:
+  - scareType: 1
+    cap: 70
+  - scareType: 0
+    cap: 30
+  - scareType: 2
+    cap: 10
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
   veryScaredSound: Grandma_Sounds_VeryScared

@@ -42,8 +42,8 @@ public class TimeAndEventHandler
     public void advanceTime(TimeSpan increment)
     {
         // Debug.Log("Advanced Time");
-        currentTime += increment;
         doRoutines();
+        currentTime += increment;
         GameManager.getInstance().gameStateManager.updateGameState();
     }
     public void advanceTime()
