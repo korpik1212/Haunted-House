@@ -31,7 +31,7 @@ public class PauseBehaviour : MonoBehaviour
         pauseMenuPanel.enabled = true;
         Time.timeScale = 0;
 
-        FindObjectOfType<SoundManager>().Play("UI_Sounds_Click");
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("UI_Sounds_Click");
     }
 
     public void ContinueButtonOnClick()
@@ -43,13 +43,13 @@ public class PauseBehaviour : MonoBehaviour
         pauseMenuPanel.enabled = false;
         Time.timeScale = 1;
 
-        FindObjectOfType<SoundManager>().Play("UI_Sounds_Click");
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("UI_Sounds_Click");
     }
 
     public void MenuButtonOnClick()
     {
         SceneManager.LoadScene(0);
 
-        FindObjectOfType<SoundManager>().Play("UI_Sounds_Click");
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("UI_Sounds_Click");
     }
 }
