@@ -156,3 +156,6 @@ MonoBehaviour:
   fearValues: []
   startingRoom: {fileID: 0}
   bubol: {fileID: 0}
+  veryScaredSound: Daughter_Sounds_VeryScared
+  slightlyScaredSound: Daughter_Sounds_Scared
+  notScaredSound: Daughter_Sounds_NotScared
