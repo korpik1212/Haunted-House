@@ -24,7 +24,7 @@ public class Human : MonoBehaviour
     {
         
         currentRoom = startingRoom;
-        transform.position = currentRoom.transform.position;
+        transform.position = currentRoom.PersonAnchor.transform.position;
         setupFearCaps();
 
     }

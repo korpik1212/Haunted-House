@@ -23,7 +23,7 @@ public class clock : MonoBehaviour
         
         // Setze die Rotation relativ zur Initialrotation
         transform.localEulerAngles = new Vector3(0, rotationAngle, 0);
-        Debug.Log(rotationAngle);
+        // Debug.Log(rotationAngle);
         
         // Optional: Debug-Ausgabe entfernen oder anpassen
         // Debug.Log("Time: " + currentTime.ToString("HH:mm:ss"));

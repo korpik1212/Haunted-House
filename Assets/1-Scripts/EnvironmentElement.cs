@@ -33,7 +33,11 @@ public class EnvironmentElement : MonoBehaviour,ICardTargetable,IHoverable
     public void setTrap(ScareSchmevent e)
     {
         Trap = e;
-        trapSpriteHolder.sprite = e.eventSprite;
+        if (trapSpriteHolder != null && e != null && e.eventSprite != null)
+        {
+            trapSpriteHolder.sprite = e.eventSprite;    
+        }
+        
     }
 
     public bool hasTrap()

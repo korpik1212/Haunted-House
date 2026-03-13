@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnvironmentElement
   type: 0
-  trapSpriteHolder: {fileID: 0}
+  trapSpriteHolder: {fileID: 3417225956528774970}
 --- !u!61 &2453428338465010919
 BoxCollider2D:
   m_ObjectHideFlags: 0
