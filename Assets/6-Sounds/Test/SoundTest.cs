@@ -16,6 +16,6 @@ public class SoundTest : MonoBehaviour
 
     public void ButtonOnClickSoundTest()
     {
-        FindObjectOfType<SoundManager>().Play("Event_Rat");
+        GameObject.Find("SoundManager").GetComponent<SoundManager>().Play("Event_Rat");
     }
 }
